@@ -22,6 +22,11 @@
 		A05706202273121C00B16D9F /* PictureBrowseView.m in Sources */ = {isa = PBXBuildFile; fileRef = A057061F2273121C00B16D9F /* PictureBrowseView.m */; };
 		A0570623227315A800B16D9F /* ProgressView.m in Sources */ = {isa = PBXBuildFile; fileRef = A0570622227315A800B16D9F /* ProgressView.m */; };
 		A05706282273198000B16D9F /* PictureBrowerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A05706272273198000B16D9F /* PictureBrowerViewController.m */; };
+		A0D611A922755AA1004D5DAE /* ZWVerifyCodeCursorView.m in Sources */ = {isa = PBXBuildFile; fileRef = A0D611A822755AA1004D5DAE /* ZWVerifyCodeCursorView.m */; };
+		A0D611AC22755B16004D5DAE /* ZWVerifyCodeCursorLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = A0D611AB22755B16004D5DAE /* ZWVerifyCodeCursorLabel.m */; };
+		A0D611AE22757AA3004D5DAE /* VerifyCodeReadMe.md in Resources */ = {isa = PBXBuildFile; fileRef = A0D611AD22757AA3004D5DAE /* VerifyCodeReadMe.md */; };
+		A0D611B022757B02004D5DAE /* PhotoBrowerReadMe.md in Resources */ = {isa = PBXBuildFile; fileRef = A0D611AF22757B02004D5DAE /* PhotoBrowerReadMe.md */; };
+		A0D611B322757CF3004D5DAE /* ZWVerityCodeLineView.m in Sources */ = {isa = PBXBuildFile; fileRef = A0D611B222757CF3004D5DAE /* ZWVerityCodeLineView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -58,6 +63,14 @@
 		A05706252273163600B16D9F /* PhotoBrowerConfig.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PhotoBrowerConfig.h; sourceTree = "<group>"; };
 		A05706262273198000B16D9F /* PictureBrowerViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PictureBrowerViewController.h; sourceTree = "<group>"; };
 		A05706272273198000B16D9F /* PictureBrowerViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PictureBrowerViewController.m; sourceTree = "<group>"; };
+		A0D611A722755AA1004D5DAE /* ZWVerifyCodeCursorView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZWVerifyCodeCursorView.h; sourceTree = "<group>"; };
+		A0D611A822755AA1004D5DAE /* ZWVerifyCodeCursorView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZWVerifyCodeCursorView.m; sourceTree = "<group>"; };
+		A0D611AA22755B16004D5DAE /* ZWVerifyCodeCursorLabel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZWVerifyCodeCursorLabel.h; sourceTree = "<group>"; };
+		A0D611AB22755B16004D5DAE /* ZWVerifyCodeCursorLabel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZWVerifyCodeCursorLabel.m; sourceTree = "<group>"; };
+		A0D611AD22757AA3004D5DAE /* VerifyCodeReadMe.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = VerifyCodeReadMe.md; sourceTree = "<group>"; };
+		A0D611AF22757B02004D5DAE /* PhotoBrowerReadMe.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = PhotoBrowerReadMe.md; sourceTree = "<group>"; };
+		A0D611B122757CF3004D5DAE /* ZWVerityCodeLineView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZWVerityCodeLineView.h; sourceTree = "<group>"; };
+		A0D611B222757CF3004D5DAE /* ZWVerityCodeLineView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZWVerityCodeLineView.m; sourceTree = "<group>"; };
 		DEFDFC21926799D830E4C364 /* Pods-ZWOCComponent.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ZWOCComponent.release.xcconfig"; path = "Pods/Target Support Files/Pods-ZWOCComponent/Pods-ZWOCComponent.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -136,6 +149,7 @@
 		A05705FB2272DF8A00B16D9F /* Components */ = {
 			isa = PBXGroup;
 			children = (
+				A0D611A522755A49004D5DAE /* VerifyCode */,
 				A057061822730D6500B16D9F /* PhotoBrower */,
 				A05706002272E14A00B16D9F /* BaseViewController */,
 				A05705FC2272DFDE00B16D9F /* WebView */,
@@ -230,6 +244,7 @@
 				A05706242273161100B16D9F /* Config */,
 				A057061A22730D8000B16D9F /* View */,
 				A057061922730D7A00B16D9F /* Controller */,
+				A0D611AF22757B02004D5DAE /* PhotoBrowerReadMe.md */,
 			);
 			path = PhotoBrower;
 			sourceTree = "<group>";
@@ -262,6 +277,28 @@
 				A05706252273163600B16D9F /* PhotoBrowerConfig.h */,
 			);
 			path = Config;
+			sourceTree = "<group>";
+		};
+		A0D611A522755A49004D5DAE /* VerifyCode */ = {
+			isa = PBXGroup;
+			children = (
+				A0D611A622755A7A004D5DAE /* View */,
+				A0D611AD22757AA3004D5DAE /* VerifyCodeReadMe.md */,
+			);
+			path = VerifyCode;
+			sourceTree = "<group>";
+		};
+		A0D611A622755A7A004D5DAE /* View */ = {
+			isa = PBXGroup;
+			children = (
+				A0D611A722755AA1004D5DAE /* ZWVerifyCodeCursorView.h */,
+				A0D611A822755AA1004D5DAE /* ZWVerifyCodeCursorView.m */,
+				A0D611AA22755B16004D5DAE /* ZWVerifyCodeCursorLabel.h */,
+				A0D611AB22755B16004D5DAE /* ZWVerifyCodeCursorLabel.m */,
+				A0D611B122757CF3004D5DAE /* ZWVerityCodeLineView.h */,
+				A0D611B222757CF3004D5DAE /* ZWVerityCodeLineView.m */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 		DF4DB9E122379F5F0D2A82D6 /* Pods */ = {
@@ -332,7 +369,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A0D611AE22757AA3004D5DAE /* VerifyCodeReadMe.md in Resources */,
 				A05705F22272DF7600B16D9F /* LaunchScreen.storyboard in Resources */,
+				A0D611B022757B02004D5DAE /* PhotoBrowerReadMe.md in Resources */,
 				A05705EF2272DF7600B16D9F /* Assets.xcassets in Resources */,
 				A05705ED2272DF7500B16D9F /* Main.storyboard in Resources */,
 			);
@@ -389,10 +428,13 @@
 				A05706162272FB0D00B16D9F /* RootViewController.m in Sources */,
 				A05706122272F83E00B16D9F /* RootNavigationController.m in Sources */,
 				A057060D2272F72200B16D9F /* MBProgressHUD+XY.m in Sources */,
+				A0D611B322757CF3004D5DAE /* ZWVerityCodeLineView.m in Sources */,
+				A0D611AC22755B16004D5DAE /* ZWVerifyCodeCursorLabel.m in Sources */,
 				A057061D22730F9100B16D9F /* PhotoZoomView.m in Sources */,
 				A05705F52272DF7600B16D9F /* main.m in Sources */,
 				A05706052272E1D800B16D9F /* WebViewViewController.m in Sources */,
 				A05706202273121C00B16D9F /* PictureBrowseView.m in Sources */,
+				A0D611A922755AA1004D5DAE /* ZWVerifyCodeCursorView.m in Sources */,
 				A05706282273198000B16D9F /* PictureBrowerViewController.m in Sources */,
 				A05705E72272DF7500B16D9F /* AppDelegate.m in Sources */,
 			);

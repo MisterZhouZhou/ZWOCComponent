@@ -10,7 +10,8 @@
 #import "WebViewViewController.h"
 #import <WebKit/WebKit.h>
 #import "PictureBrowerViewController.h"
-
+#import "ZWVerifyCodeCursorView.h"
+#import "CommonDefine.h"
 @interface ViewController ()
 
 @end
@@ -19,12 +20,22 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+    ZWVerifyCodeCursorView *code4View = [[ZWVerifyCodeCursorView alloc] initWithCount:4 margin:20];
+    code4View.frame = CGRectMake(20, 90, KScreenWidth-40, 40);
+    code4View.lineColor = [UIColor greenColor];
+    code4View.itemMargin = 10;
+    code4View.codeColor  = [UIColor blueColor];
+    code4View.codeFont   = [UIFont systemFontOfSize:20];
+    code4View.codeMode   = CodeMode_Border;
+    code4View.inputEndBlock = ^(NSString *code){
+        NSLog(@"%@", code);
+    };
+    [self.view addSubview:code4View];
 }
 
 - (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
-    PictureBrowerViewController *pVC = [PictureBrowerViewController new];
-    pVC.urlsArray = @[@"https://avatar.csdn.net/5/F/0/3_zww1984774346.jpg", @"https://avatar.csdn.net/5/F/0/3_zww1984774346.jpg"];
-    [self.navigationController pushViewController:pVC animated:YES];
+    
 }
 
 

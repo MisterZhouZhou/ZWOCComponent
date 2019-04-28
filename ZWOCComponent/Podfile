@@ -1,0 +1,14 @@
+# use_frameworks!
+# inhibit_all_warnings!
+
+# source 'https://github.com/CocoaPods/Specs.git'
+# source 'https://github.com/ibireme/YYKit.git'
+
+platform :ios, '8.0'
+
+target 'ZWOCComponent' do
+  pod 'MBProgressHUD'
+  pod 'YYKit'
+  pod 'MJRefresh'
+  pod 'SDWebImage'
+end

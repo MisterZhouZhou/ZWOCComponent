@@ -22,4 +22,10 @@
 // 当前系统版本
 #define CurrentSystemVersion [[UIDevice currentDevice].systemVersion doubleValue]
 
+
+//强弱引用
+#define kWeakSelf(type)  __weak typeof(type) weak##type = type;
+#define kStrongSelf(type) __strong typeof(type) type = weak##type;
+
+
 #endif /* CommonDefine_h */
