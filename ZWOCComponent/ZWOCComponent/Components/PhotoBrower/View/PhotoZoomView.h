@@ -12,6 +12,6 @@
 
 @property (nonatomic, copy) NSString *imageUrl;
 // 缩放方法，共外界调用
-- (void)pictureZoomWithScale:(CGFloat)zoomScale;
+- (void)pictureZoomWithScale:(CGFloat)zoomScale touchPoint:(CGPoint)point;
 
 @end

@@ -46,11 +46,12 @@
 
 #pragma mark -- Event Handle
 - (void)doubleTap:(UITapGestureRecognizer *)tap {
+    CGPoint point = [tap locationInView:tap.view];
     if (!_doubleTap) {
-        [self.currentPhotoZoomView pictureZoomWithScale:self.currentPhotoZoomView.maximumZoomScale];
+        [self.currentPhotoZoomView pictureZoomWithScale:self.currentPhotoZoomView.maximumZoomScale touchPoint:point];
         _doubleTap = YES;
     }else{
-        [self.currentPhotoZoomView pictureZoomWithScale:self.currentPhotoZoomView.minimumZoomScale];
+        [self.currentPhotoZoomView pictureZoomWithScale:self.currentPhotoZoomView.minimumZoomScale touchPoint:CGPointZero];
         _doubleTap = NO;
     }
 }
@@ -193,9 +194,11 @@
     if (scrollIndex != self.index) {
         //重置上一个缩放过的视图
         PhotoZoomView * zoomView  = (PhotoZoomView *)scrollView.subviews[self.index];
-        [zoomView pictureZoomWithScale:1.0];
+        [zoomView pictureZoomWithScale:1.0 touchPoint:CGPointZero];
         self.index = scrollIndex;
         self.currentPhotoZoomView = (PhotoZoomView *)scrollView.subviews[self.index];
+        // 重置缩放状态
+        self.doubleTap = NO;
     }
     self.indexLabel.text = [NSString stringWithFormat:@"%zd/%zd", self.index + 1,self.count];
 }

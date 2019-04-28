@@ -9,12 +9,11 @@
 #import "PhotoZoomView.h"
 #import <SDWebImage/SDWebImage.h>
 #import "ProgressView.h"
+#import "CommonDefine.h"
 
 @interface PhotoZoomView()<UIScrollViewDelegate>
 
 @property (nonatomic, strong) UIImageView * imageView;  // 图片
-@property (nonatomic, assign) CGFloat imageNormalWidth; // 图片未缩放时宽度
-@property (nonatomic, assign) CGFloat imageNormalHeight; // 图片未缩放时高度
 @property (nonatomic , strong) ProgressView *progressView;
 
 @end
@@ -27,16 +26,15 @@
         self.delegate = self;
         self.minimumZoomScale = 1.0f;
         self.maximumZoomScale = 2.0f;
-        _imageNormalHeight = frame.size.height;
-        _imageNormalWidth = frame.size.width;
-        self.imageView = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, _imageNormalWidth, _imageNormalWidth)];
+        self.imageView = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, frame.size.width, frame.size.width)];
         self.imageView.center = CGPointMake(self.frame.size.width/2, self.frame.size.height/2);
         self.imageView.contentMode = UIViewContentModeScaleToFill;
         self.imageView.userInteractionEnabled = YES;
         self.imageView.clipsToBounds = YES;
         [self addSubview:self.imageView];
-        self.progressView.bounds = CGRectMake(0, 0, 100, 100);
-        self.progressView.center = self.imageView.center;
+        // 进度条
+        self.progressView.frame = CGRectMake(0, 0, 60, 60);
+        self.progressView.center = CGPointMake(self.imageView.frame.size.width/2, self.imageView.frame.size.height/2);
         [self.imageView addSubview:self.progressView];
         if (@available(iOS 11.0, *)) {
             self.contentInsetAdjustmentBehavior =  UIScrollViewContentInsetAdjustmentNever;
@@ -48,20 +46,28 @@
 }
 
 #pragma mark -- Help Methods
-- (void)pictureZoomWithScale:(CGFloat)zoomScale {
+- (void)pictureZoomWithScale:(CGFloat)zoomScale touchPoint:(CGPoint)point {
     // 延中心点缩放
-    CGFloat imageScaleWidth = zoomScale * self.imageNormalWidth;
-    CGFloat imageScaleHeight = zoomScale * self.imageNormalHeight;
-    CGFloat imageX = 0;
-    CGFloat imageY = 0;
-    if (imageScaleWidth < self.frame.size.width) {
-        imageX = floorf((self.frame.size.width - imageScaleWidth) / 2.0);
+    if (zoomScale <= self.minimumZoomScale) {
+        [self setZoomScale:self.minimumZoomScale animated:YES];
+    }else{
+        CGFloat touchX = point.x;
+        CGFloat touchY = point.y;
+        touchX *= 1 / self.zoomScale;
+        touchY *= 1 / self.zoomScale;
+        touchX += self.contentOffset.x;
+        touchY += self.contentOffset.y;
+        CGRect zoomRect = [self zoomRectForScale:self.maximumZoomScale withCenter:CGPointMake(touchX, touchY)];
+        [self zoomToRect:zoomRect animated:YES];
     }
-    if (imageScaleHeight < self.frame.size.height) {
-        imageY = floorf((self.frame.size.height - imageScaleHeight) / 2.0);
-    }
-    self.imageView.frame = CGRectMake(imageX, imageY, imageScaleWidth, imageScaleHeight);
-    self.contentSize = CGSizeMake(imageScaleWidth,imageScaleHeight);
+}
+
+- (CGRect)zoomRectForScale:(CGFloat)scale withCenter:(CGPoint)center {
+    CGFloat height = self.frame.size.height / scale;
+    CGFloat width  = self.frame.size.width / scale;
+    CGFloat x = center.x - width * 0.5;
+    CGFloat y = center.y - height * 0.5;
+    return CGRectMake(x, y, width, height);
 }
 
 - (void)setImageUrl:(NSString *)imageUrl {
@@ -72,7 +78,7 @@
         [self.imageView sd_setImageWithURL:[NSURL URLWithString:imageUrl] placeholderImage:[UIImage imageNamed:@""] options:SDWebImageRetryFailed| SDWebImageLowPriority| SDWebImageHandleCookies progress:^(NSInteger receivedSize, NSInteger expectedSize, NSURL * _Nullable targetURL) {
             dispatch_async(dispatch_get_main_queue(), ^{
                 __strong __typeof(weakSelf)strongSelf = weakSelf;
-                if ([strongSelf.imageUrl isEqual:targetURL] && expectedSize > 0) {
+                if ([strongSelf.imageUrl isEqual:targetURL.absoluteString] && expectedSize > 0) {
                     strongSelf.progressView.progress = (CGFloat)receivedSize / expectedSize ;
                 }
             });
@@ -80,6 +86,7 @@
             __strong __typeof(weakSelf)strongSelf = weakSelf;
             [strongSelf.progressView removeFromSuperview];
             if (error) {
+                [strongSelf setMaxAndMinZoomScales];
                 NSLog(@"加载图片失败 , 图片链接imageURL = %@ , 错误信息: %@ ,检查是否开启允许HTTP请求",imageURL,error);
             } else {
                 [UIView animateWithDuration:0.25 animations:^{
@@ -105,20 +112,19 @@
         return;
     }
     CGFloat imageWidthHeightRatio = image.size.width / image.size.height;
-    self.imageView.xl_width = self.xl_width;
-    self.imageView.xl_height = self.xl_width / imageWidthHeightRatio;
-    self.imageView.xl_x = 0;
-    if (self.imageView.xl_height > XLScreenH) {
-        self.imageView.xl_y = 0;
-        self.scrollview.scrollEnabled = YES;
+    CGFloat imageWidth  = CGRectGetWidth(self.frame);
+    CGFloat imageHeight =  imageWidth  / imageWidthHeightRatio;
+    CGFloat imageX = 0;
+    CGFloat imageY = 0;
+    CGFloat viewHeight = CGRectGetHeight(self.frame);
+    if (imageHeight > viewHeight) {
+        imageY = 0;
     } else {
-        self.imageView.xl_y = (XLScreenH - self.photoImageView.xl_height ) * 0.5;
-        self.scrollview.scrollEnabled = NO;
+        imageY = (viewHeight - imageHeight) * 0.5;
     }
-    self.scrollview.maximumZoomScale = MAX(XLScreenH / self.photoImageView.xl_height, 3.0);
-    self.scrollview.minimumZoomScale = 1.0;
-    self.scrollview.zoomScale = 1.0;
-    self.scrollview.contentSize = CGSizeMake(self.photoImageView.xl_width, MAX(self.photoImageView.xl_height, XLScreenH));
+    self.imageView.frame = CGRectMake(imageX, imageY, imageWidth, imageHeight);
+    self.zoomScale = 1.0;
+    self.contentSize = CGSizeMake(imageWidth, MAX(imageHeight, KScreenHeight));
 }
 
 #pragma mark -- UIScrollViewDelegate
@@ -139,17 +145,18 @@
 //缩放中
 - (void)scrollViewDidZoom:(UIScrollView *)scrollView {
     // 延中心点缩放
-    CGFloat imageScaleWidth = scrollView.zoomScale * self.imageNormalWidth;
-    CGFloat imageScaleHeight = scrollView.zoomScale * self.imageNormalHeight;
-    CGFloat imageX = 0;
-    CGFloat imageY = 0;
-    if (imageScaleWidth < self.frame.size.width) {
-        imageX = floorf((self.frame.size.width - imageScaleWidth) / 2.0);
-    }
-    if (imageScaleHeight < self.frame.size.height) {
-        imageY = floorf((self.frame.size.height - imageScaleHeight) / 2.0);
-    }
-    self.imageView.frame = CGRectMake(imageX, imageY, imageScaleWidth, imageScaleHeight);
+    self.imageView.center = [self centerOfScrollViewContent:scrollView];
+}
+
+#pragma mark - 根据偏移量获取图片的中心点
+- (CGPoint)centerOfScrollViewContent:(UIScrollView *)scrollView {
+    CGFloat offsetX = (scrollView.bounds.size.width > scrollView.contentSize.width)?
+    (scrollView.bounds.size.width - scrollView.contentSize.width) * 0.5 : 0.0;
+    CGFloat offsetY = (scrollView.bounds.size.height > scrollView.contentSize.height)?
+    (scrollView.bounds.size.height - scrollView.contentSize.height) * 0.5 : 0.0;
+    CGPoint actualCenter = CGPointMake(scrollView.contentSize.width * 0.5 + offsetX,
+                                       scrollView.contentSize.height * 0.5 + offsetY);
+    return actualCenter;
 }
 
 - (ProgressView *)progressView {

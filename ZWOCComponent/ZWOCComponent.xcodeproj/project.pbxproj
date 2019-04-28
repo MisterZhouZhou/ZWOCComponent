@@ -81,6 +81,21 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		A00389A6227548AF005BE1EE /* UIKit */ = {
+			isa = PBXGroup;
+			children = (
+				A00389A7227548BD005BE1EE /* UIView */,
+			);
+			path = UIKit;
+			sourceTree = "<group>";
+		};
+		A00389A7227548BD005BE1EE /* UIView */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = UIView;
+			sourceTree = "<group>";
+		};
 		A05705D92272DF7400B16D9F = {
 			isa = PBXGroup;
 			children = (
@@ -168,6 +183,7 @@
 		A05706082272ECD100B16D9F /* Category */ = {
 			isa = PBXGroup;
 			children = (
+				A00389A6227548AF005BE1EE /* UIKit */,
 				A05706092272ECE800B16D9F /* MBProgressHUB */,
 			);
 			path = Category;
