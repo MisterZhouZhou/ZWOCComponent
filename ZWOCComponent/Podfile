@@ -11,4 +11,7 @@ target 'ZWOCComponent' do
   pod 'YYKit'
   pod 'MJRefresh'
   pod 'SDWebImage'
+  pod 'TZImagePickerController'
+  pod 'Masonry'
+  pod 'MJExtension'
 end

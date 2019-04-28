@@ -10,10 +10,12 @@
 #import <SDWebImage/SDWebImage.h>
 #import "ProgressView.h"
 #import "CommonDefine.h"
+#import "UIImage+Gif.h"
+#import <Photos/Photos.h>
 
 @interface PhotoZoomView()<UIScrollViewDelegate>
 
-@property (nonatomic, strong) UIImageView * imageView;  // 图片
+@property (nonatomic, strong) UIImageView * imageView;    // 图片
 @property (nonatomic , strong) ProgressView *progressView;
 
 @end
@@ -36,6 +38,8 @@
         self.progressView.frame = CGRectMake(0, 0, 60, 60);
         self.progressView.center = CGPointMake(self.imageView.frame.size.width/2, self.imageView.frame.size.height/2);
         [self.imageView addSubview:self.progressView];
+        // 添加双击手势
+        [self addGestureRecognizer];
         if (@available(iOS 11.0, *)) {
             self.contentInsetAdjustmentBehavior =  UIScrollViewContentInsetAdjustmentNever;
         } else {
@@ -43,6 +47,26 @@
         }
     }
     return self;
+}
+
+#pragma mark 初始化手势
+- (void)addGestureRecognizer {
+//    self.userInteractionEnabled = YES;
+    // 双击手势
+    UITapGestureRecognizer * doubleTap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(doubleTap:)];
+    doubleTap.numberOfTapsRequired = 2;
+    [self.imageView addGestureRecognizer:doubleTap];
+}
+
+- (void)doubleTap:(UITapGestureRecognizer *)tap {
+    CGPoint point = [tap locationInView:tap.view];
+    if (!_doubleTap) {
+        [self pictureZoomWithScale:self.maximumZoomScale touchPoint:point];
+        _doubleTap = YES;
+    }else{
+        [self pictureZoomWithScale:self.minimumZoomScale touchPoint:CGPointZero];
+        _doubleTap = NO;
+    }
 }
 
 #pragma mark -- Help Methods
@@ -70,6 +94,7 @@
     return CGRectMake(x, y, width, height);
 }
 
+#pragma mark 设置url
 - (void)setImageUrl:(NSString *)imageUrl {
     _imageUrl = imageUrl;
     if ([imageUrl hasPrefix:@"http://"] || [imageUrl hasPrefix:@"https://"]) { // 网络图
@@ -101,6 +126,47 @@
         self.imageView.image = [UIImage imageWithData:imageData];
     }
 }
+
+#pragma mark 设置image
+-(void)setImage:(UIImage *)image {
+    _image = image;
+    if (image) {
+        [self.progressView removeFromSuperview];
+        self.imageView.image = image;
+    }
+}
+
+#pragma mark 设置asset image
+-(void)setAssetImage:(PHAsset *)assetImage {
+    _assetImage = assetImage;
+    // 从相册获取gif
+    [self getOriginalPhotoDataWithAsset:assetImage completion:^(NSData *data, NSDictionary *info, BOOL isDegraded) {
+        self.imageView.image = [UIImage sd_imageWithGIFData:data];
+    }];
+}
+
+#pragma mark 从相册获取资源
+- (PHImageRequestID)getOriginalPhotoDataWithAsset:(PHAsset *)asset completion:(void (^)(NSData *data,NSDictionary *info,BOOL isDegraded))completion {
+    return [self getOriginalPhotoDataWithAsset:asset progressHandler:nil completion:completion];
+}
+
+- (PHImageRequestID)getOriginalPhotoDataWithAsset:(PHAsset *)asset progressHandler:(void (^)(double progress, NSError *error, BOOL *stop, NSDictionary *info))progressHandler completion:(void (^)(NSData *data,NSDictionary *info,BOOL isDegraded))completion {
+    PHImageRequestOptions *option = [[PHImageRequestOptions alloc] init];
+    option.networkAccessAllowed = YES;
+    if ([[asset valueForKey:@"filename"] hasSuffix:@"GIF"]) {
+        // if version isn't PHImageRequestOptionsVersionOriginal, the gif may cann't play
+        option.version = PHImageRequestOptionsVersionOriginal;
+    }
+    [option setProgressHandler:progressHandler];
+    option.deliveryMode = PHImageRequestOptionsDeliveryModeHighQualityFormat;
+    return [[PHImageManager defaultManager] requestImageDataForAsset:asset options:option resultHandler:^(NSData *imageData, NSString *dataUTI, UIImageOrientation orientation, NSDictionary *info) {
+        BOOL downloadFinined = (![[info objectForKey:PHImageCancelledKey] boolValue] && ![info objectForKey:PHImageErrorKey]);
+        if (downloadFinined && imageData) {
+            if (completion) completion(imageData,info,NO);
+        }
+    }];
+}
+
 
 /**
  *  根据图片和屏幕比例关系,调整最大和最小伸缩比例

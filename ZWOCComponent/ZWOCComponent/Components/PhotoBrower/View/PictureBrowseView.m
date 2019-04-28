@@ -16,7 +16,6 @@
 @property (nonatomic, assign) NSInteger count;
 @property (nonatomic, strong) UIScrollView * scrollView;
 @property (nonatomic, strong) UILabel * indexLabel;
-@property (nonatomic, assign) BOOL doubleTap;                  // 是否为双击
 
 @end
 
@@ -25,7 +24,7 @@
 - (id)initWithFrame:(CGRect)frame {
     if (self == [super initWithFrame:frame]) {
         self.backgroundColor = [UIColor blackColor];
-        [self addGestureRecognizer];
+//        [self addGestureRecognizer];
         [self addSubview:self.scrollView];
         [self addSubview:self.indexLabel];
     }
@@ -38,24 +37,9 @@
     // 长按手势
 //    UILongPressGestureRecognizer * longGR = [[UILongPressGestureRecognizer alloc] initWithTarget:self action:@selector(longGR:)];
 //    [self addGestureRecognizer:longGR];
-    // 双击手势
-    UITapGestureRecognizer * doubleTap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(doubleTap:)];
-    doubleTap.numberOfTapsRequired = 2;
-    [self addGestureRecognizer:doubleTap];
 }
 
 #pragma mark -- Event Handle
-- (void)doubleTap:(UITapGestureRecognizer *)tap {
-    CGPoint point = [tap locationInView:tap.view];
-    if (!_doubleTap) {
-        [self.currentPhotoZoomView pictureZoomWithScale:self.currentPhotoZoomView.maximumZoomScale touchPoint:point];
-        _doubleTap = YES;
-    }else{
-        [self.currentPhotoZoomView pictureZoomWithScale:self.currentPhotoZoomView.minimumZoomScale touchPoint:CGPointZero];
-        _doubleTap = NO;
-    }
-}
-
 - (void)longGR:(UILongPressGestureRecognizer *)longGr {
     if (!self.viewController) {
         return;
@@ -198,7 +182,7 @@
         self.index = scrollIndex;
         self.currentPhotoZoomView = (PhotoZoomView *)scrollView.subviews[self.index];
         // 重置缩放状态
-        self.doubleTap = NO;
+        self.currentPhotoZoomView.doubleTap = NO;
     }
     self.indexLabel.text = [NSString stringWithFormat:@"%zd/%zd", self.index + 1,self.count];
 }

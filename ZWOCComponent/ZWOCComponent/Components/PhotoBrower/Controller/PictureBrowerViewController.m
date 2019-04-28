@@ -60,7 +60,7 @@
 - (UIButton *)backButton {
     if (!_backButton) {
         _backButton = [UIButton buttonWithType:UIButtonTypeCustom];
-        [_backButton setBackgroundColor:[UIColor redColor]];
+        [_backButton setImage:[UIImage imageNamed:@"icon_back"] forState:UIControlStateNormal];
         [_backButton addTarget:self
                         action:@selector(backAction)
               forControlEvents:UIControlEventTouchUpInside];
