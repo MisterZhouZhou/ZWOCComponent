@@ -28,6 +28,7 @@
     code4View.codeColor  = [UIColor blueColor];
     code4View.codeFont   = [UIFont systemFontOfSize:20];
     code4View.codeMode   = CodeMode_Border;
+    code4View.animated   = YES;
     code4View.inputEndBlock = ^(NSString *code){
         NSLog(@"%@", code);
     };

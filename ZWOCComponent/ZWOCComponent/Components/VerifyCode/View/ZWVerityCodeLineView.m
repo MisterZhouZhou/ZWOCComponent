@@ -43,7 +43,8 @@
     self.colorView.backgroundColor = backgroundColor;
 }
 
-- (void)animation {
+#pragma mark 做下划线动画
+- (void)lineAnimation {
     [self.colorView.layer removeAllAnimations];
     
     CABasicAnimation *animation = [CABasicAnimation animationWithKeyPath:@"transform.scale.x"];

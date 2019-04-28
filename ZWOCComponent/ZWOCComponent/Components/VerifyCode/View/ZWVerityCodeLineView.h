@@ -12,6 +12,6 @@
 
 @property (nonatomic, weak) UIView *colorView;
 
-- (void)animation;
+- (void)lineAnimation;
 
 @end

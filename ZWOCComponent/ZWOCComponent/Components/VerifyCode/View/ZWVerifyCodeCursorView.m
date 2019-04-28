@@ -166,22 +166,8 @@
     // 获取下一个输入焦点
     [self cursor];
     
-    if (self.animated) {
-        // 动画效果，这里是删除时，不要动画，输入时显示动画
-        if (self.lastInputText.length < textField.text.length) {
-            if (textField.text == nil || textField.text.length <= 0) {
-                [self.lines.firstObject animation];
-            } else if (textField.text.length >= self.itemCount) {
-                [self.lines.lastObject animation];
-                [self animation:self.labels.lastObject];
-            } else {
-                [self.lines[self.textField.text.length - 1] animation];
-                UILabel *ff = self.labels[self.textField.text.length - 1];
-                [self animation:ff];
-            }
-        }
-        self.lastInputText = textField.text;
-    }
+    // 边框动画
+    [self doAnimationWithCurrentText:textField.text];
     
     // 输入完毕后，自动隐藏键盘
     if (textField.text.length >= self.itemCount) {
@@ -190,6 +176,32 @@
         if(self.inputEndBlock){
             self.inputEndBlock(self.code);
         }
+    }
+}
+
+#pragma mark 边框/下划线动画
+- (void)doAnimationWithCurrentText:(NSString *)text {
+    if (self.animated) {
+        // 动画效果，这里是删除时，不要动画，输入时显示动画
+        if (self.lastInputText.length < text.length) {
+            if (text == nil || text.length <= 0) {
+                [self.lines.firstObject lineAnimation];
+                if (self.codeMode == CodeMode_Border) { // 边框模式做边框动画
+                    [self animation:self.labels.firstObject];
+                }
+            } else if (text.length >= self.itemCount) {
+                [self.lines.lastObject lineAnimation];
+                if (self.codeMode == CodeMode_Border) { // 边框模式做边框动画
+                    [self animation:self.labels.lastObject];
+                }
+            } else {
+                [self.lines[self.textField.text.length - 1] lineAnimation];
+                if (self.codeMode == CodeMode_Border) { // 边框模式做边框动画
+                    [self animation:self.labels[self.textField.text.length - 1]];
+                }
+            }
+        }
+        self.lastInputText = text;
     }
 }
 
