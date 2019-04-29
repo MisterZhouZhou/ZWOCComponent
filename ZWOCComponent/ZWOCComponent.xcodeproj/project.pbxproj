@@ -26,6 +26,15 @@
 		A0AFD55A22769E5C00F7A5AD /* MultiPhotoAddView.m in Sources */ = {isa = PBXBuildFile; fileRef = A0AFD55922769E5C00F7A5AD /* MultiPhotoAddView.m */; };
 		A0AFD55D2276A6C100F7A5AD /* UIView+HKFrame.m in Sources */ = {isa = PBXBuildFile; fileRef = A0AFD55B2276A6C100F7A5AD /* UIView+HKFrame.m */; };
 		A0AFD5602276C1EE00F7A5AD /* MultiPhotoPreView.m in Sources */ = {isa = PBXBuildFile; fileRef = A0AFD55F2276C1EE00F7A5AD /* MultiPhotoPreView.m */; };
+		A0AFD5752276EE6C00F7A5AD /* BRStringPickerView.m in Sources */ = {isa = PBXBuildFile; fileRef = A0AFD5642276EE6C00F7A5AD /* BRStringPickerView.m */; };
+		A0AFD5762276EE6C00F7A5AD /* NSDate+BRPickerView.m in Sources */ = {isa = PBXBuildFile; fileRef = A0AFD5692276EE6C00F7A5AD /* NSDate+BRPickerView.m */; };
+		A0AFD5772276EE6C00F7A5AD /* BRDatePickerView.m in Sources */ = {isa = PBXBuildFile; fileRef = A0AFD56A2276EE6C00F7A5AD /* BRDatePickerView.m */; };
+		A0AFD5782276EE6C00F7A5AD /* BRBaseView.m in Sources */ = {isa = PBXBuildFile; fileRef = A0AFD56E2276EE6C00F7A5AD /* BRBaseView.m */; };
+		A0AFD5792276EE6C00F7A5AD /* BRAddressModel.m in Sources */ = {isa = PBXBuildFile; fileRef = A0AFD5712276EE6C00F7A5AD /* BRAddressModel.m */; };
+		A0AFD57A2276EE6C00F7A5AD /* BRAddressPickerView.m in Sources */ = {isa = PBXBuildFile; fileRef = A0AFD5742276EE6C00F7A5AD /* BRAddressPickerView.m */; };
+		A0AFD57E2276EFB500F7A5AD /* NSDate+Date.m in Sources */ = {isa = PBXBuildFile; fileRef = A0AFD57D2276EFB500F7A5AD /* NSDate+Date.m */; };
+		A0AFD5802276F15E00F7A5AD /* BRPickerViewReadMe.md in Resources */ = {isa = PBXBuildFile; fileRef = A0AFD57F2276F15E00F7A5AD /* BRPickerViewReadMe.md */; };
+		A0C12C8F2276F6A7009C7DA2 /* BRPickerView.bundle in Resources */ = {isa = PBXBuildFile; fileRef = A0C12C8E2276F6A6009C7DA2 /* BRPickerView.bundle */; };
 		A0D611A922755AA1004D5DAE /* ZWVerifyCodeCursorView.m in Sources */ = {isa = PBXBuildFile; fileRef = A0D611A822755AA1004D5DAE /* ZWVerifyCodeCursorView.m */; };
 		A0D611AC22755B16004D5DAE /* ZWVerifyCodeCursorLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = A0D611AB22755B16004D5DAE /* ZWVerifyCodeCursorLabel.m */; };
 		A0D611AE22757AA3004D5DAE /* VerifyCodeReadMe.md in Resources */ = {isa = PBXBuildFile; fileRef = A0D611AD22757AA3004D5DAE /* VerifyCodeReadMe.md */; };
@@ -122,6 +131,24 @@
 		A0AFD55C2276A6C100F7A5AD /* UIView+HKFrame.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+HKFrame.h"; sourceTree = "<group>"; };
 		A0AFD55E2276C1EE00F7A5AD /* MultiPhotoPreView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MultiPhotoPreView.h; sourceTree = "<group>"; };
 		A0AFD55F2276C1EE00F7A5AD /* MultiPhotoPreView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MultiPhotoPreView.m; sourceTree = "<group>"; };
+		A0AFD5632276EE6C00F7A5AD /* BRStringPickerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BRStringPickerView.h; sourceTree = "<group>"; };
+		A0AFD5642276EE6C00F7A5AD /* BRStringPickerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BRStringPickerView.m; sourceTree = "<group>"; };
+		A0AFD5662276EE6C00F7A5AD /* BRPickerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BRPickerView.h; sourceTree = "<group>"; };
+		A0AFD5682276EE6C00F7A5AD /* BRDatePickerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BRDatePickerView.h; sourceTree = "<group>"; };
+		A0AFD5692276EE6C00F7A5AD /* NSDate+BRPickerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDate+BRPickerView.m"; sourceTree = "<group>"; };
+		A0AFD56A2276EE6C00F7A5AD /* BRDatePickerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BRDatePickerView.m; sourceTree = "<group>"; };
+		A0AFD56B2276EE6C00F7A5AD /* NSDate+BRPickerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDate+BRPickerView.h"; sourceTree = "<group>"; };
+		A0AFD56D2276EE6C00F7A5AD /* BRPickerViewMacro.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BRPickerViewMacro.h; sourceTree = "<group>"; };
+		A0AFD56E2276EE6C00F7A5AD /* BRBaseView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BRBaseView.m; sourceTree = "<group>"; };
+		A0AFD56F2276EE6C00F7A5AD /* BRBaseView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BRBaseView.h; sourceTree = "<group>"; };
+		A0AFD5712276EE6C00F7A5AD /* BRAddressModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BRAddressModel.m; sourceTree = "<group>"; };
+		A0AFD5722276EE6C00F7A5AD /* BRAddressPickerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BRAddressPickerView.h; sourceTree = "<group>"; };
+		A0AFD5732276EE6C00F7A5AD /* BRAddressModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BRAddressModel.h; sourceTree = "<group>"; };
+		A0AFD5742276EE6C00F7A5AD /* BRAddressPickerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BRAddressPickerView.m; sourceTree = "<group>"; };
+		A0AFD57C2276EFB500F7A5AD /* NSDate+Date.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSDate+Date.h"; sourceTree = "<group>"; };
+		A0AFD57D2276EFB500F7A5AD /* NSDate+Date.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSDate+Date.m"; sourceTree = "<group>"; };
+		A0AFD57F2276F15E00F7A5AD /* BRPickerViewReadMe.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = BRPickerViewReadMe.md; sourceTree = "<group>"; };
+		A0C12C8E2276F6A6009C7DA2 /* BRPickerView.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = BRPickerView.bundle; sourceTree = "<group>"; };
 		A0D611A722755AA1004D5DAE /* ZWVerifyCodeCursorView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZWVerifyCodeCursorView.h; sourceTree = "<group>"; };
 		A0D611A822755AA1004D5DAE /* ZWVerifyCodeCursorView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZWVerifyCodeCursorView.m; sourceTree = "<group>"; };
 		A0D611AA22755B16004D5DAE /* ZWVerifyCodeCursorLabel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZWVerifyCodeCursorLabel.h; sourceTree = "<group>"; };
@@ -299,6 +326,7 @@
 		A05705FB2272DF8A00B16D9F /* Components */ = {
 			isa = PBXGroup;
 			children = (
+				A0AFD5612276EE6C00F7A5AD /* BRPickerView */,
 				A0D6123F22759DBA004D5DAE /* AlertView */,
 				A0D611B4227585EE004D5DAE /* PickerView */,
 				A0D611A522755A49004D5DAE /* VerifyCode */,
@@ -432,6 +460,78 @@
 			path = Config;
 			sourceTree = "<group>";
 		};
+		A0AFD5612276EE6C00F7A5AD /* BRPickerView */ = {
+			isa = PBXGroup;
+			children = (
+				A0AFD5622276EE6C00F7A5AD /* StringPickerView */,
+				A0AFD5652276EE6C00F7A5AD /* PVHeader */,
+				A0AFD5672276EE6C00F7A5AD /* DatePickerView */,
+				A0AFD56C2276EE6C00F7A5AD /* Base */,
+				A0AFD5702276EE6C00F7A5AD /* AddressPickerView */,
+				A0AFD57F2276F15E00F7A5AD /* BRPickerViewReadMe.md */,
+			);
+			path = BRPickerView;
+			sourceTree = "<group>";
+		};
+		A0AFD5622276EE6C00F7A5AD /* StringPickerView */ = {
+			isa = PBXGroup;
+			children = (
+				A0AFD5632276EE6C00F7A5AD /* BRStringPickerView.h */,
+				A0AFD5642276EE6C00F7A5AD /* BRStringPickerView.m */,
+			);
+			path = StringPickerView;
+			sourceTree = "<group>";
+		};
+		A0AFD5652276EE6C00F7A5AD /* PVHeader */ = {
+			isa = PBXGroup;
+			children = (
+				A0AFD5662276EE6C00F7A5AD /* BRPickerView.h */,
+			);
+			path = PVHeader;
+			sourceTree = "<group>";
+		};
+		A0AFD5672276EE6C00F7A5AD /* DatePickerView */ = {
+			isa = PBXGroup;
+			children = (
+				A0AFD5682276EE6C00F7A5AD /* BRDatePickerView.h */,
+				A0AFD5692276EE6C00F7A5AD /* NSDate+BRPickerView.m */,
+				A0AFD56A2276EE6C00F7A5AD /* BRDatePickerView.m */,
+				A0AFD56B2276EE6C00F7A5AD /* NSDate+BRPickerView.h */,
+			);
+			path = DatePickerView;
+			sourceTree = "<group>";
+		};
+		A0AFD56C2276EE6C00F7A5AD /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				A0AFD56D2276EE6C00F7A5AD /* BRPickerViewMacro.h */,
+				A0AFD56E2276EE6C00F7A5AD /* BRBaseView.m */,
+				A0AFD56F2276EE6C00F7A5AD /* BRBaseView.h */,
+			);
+			path = Base;
+			sourceTree = "<group>";
+		};
+		A0AFD5702276EE6C00F7A5AD /* AddressPickerView */ = {
+			isa = PBXGroup;
+			children = (
+				A0C12C8E2276F6A6009C7DA2 /* BRPickerView.bundle */,
+				A0AFD5732276EE6C00F7A5AD /* BRAddressModel.h */,
+				A0AFD5712276EE6C00F7A5AD /* BRAddressModel.m */,
+				A0AFD5722276EE6C00F7A5AD /* BRAddressPickerView.h */,
+				A0AFD5742276EE6C00F7A5AD /* BRAddressPickerView.m */,
+			);
+			path = AddressPickerView;
+			sourceTree = "<group>";
+		};
+		A0AFD57B2276EF9300F7A5AD /* NSDate */ = {
+			isa = PBXGroup;
+			children = (
+				A0AFD57C2276EFB500F7A5AD /* NSDate+Date.h */,
+				A0AFD57D2276EFB500F7A5AD /* NSDate+Date.m */,
+			);
+			path = NSDate;
+			sourceTree = "<group>";
+		};
 		A0D611A522755A49004D5DAE /* VerifyCode */ = {
 			isa = PBXGroup;
 			children = (
@@ -502,6 +602,7 @@
 		A0D611C12275949A004D5DAE /* NSFoundation */ = {
 			isa = PBXGroup;
 			children = (
+				A0AFD57B2276EF9300F7A5AD /* NSDate */,
 				A0D611C3227594CC004D5DAE /* NSString */,
 			);
 			path = NSFoundation;
@@ -810,11 +911,13 @@
 				A0D6124E2275A0CF004D5DAE /* icon_back@3x.png in Resources */,
 				A05705EF2272DF7600B16D9F /* Assets.xcassets in Resources */,
 				A0D611D922759769004D5DAE /* videoPreviewPlay@2x.png in Resources */,
+				A0C12C8F2276F6A7009C7DA2 /* BRPickerView.bundle in Resources */,
 				A0D611D722759769004D5DAE /* But_add_pic@2x.png in Resources */,
 				A05705ED2272DF7500B16D9F /* Main.storyboard in Resources */,
 				A0D611CB227595C8004D5DAE /* bitmap@2x.png in Resources */,
 				A0D6122622759BF1004D5DAE /* CDDMoviePlayerComponentsModules.bundle in Resources */,
 				A0D611D822759769004D5DAE /* But_add_pic@3x.png in Resources */,
+				A0AFD5802276F15E00F7A5AD /* BRPickerViewReadMe.md in Resources */,
 				A0D611DA22759769004D5DAE /* videoPreviewPlayHL@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -884,10 +987,13 @@
 				A0D612532275A5D4004D5DAE /* UIImage+Gif.m in Sources */,
 				A0D611B322757CF3004D5DAE /* ZWVerityCodeLineView.m in Sources */,
 				A0D611AC22755B16004D5DAE /* ZWVerifyCodeCursorLabel.m in Sources */,
+				A0AFD5772276EE6C00F7A5AD /* BRDatePickerView.m in Sources */,
 				A0D6122522759BF1004D5DAE /* UIView+ZFFrame.m in Sources */,
+				A0AFD57A2276EE6C00F7A5AD /* BRAddressPickerView.m in Sources */,
 				A0D611B9227586B5004D5DAE /* PickerViewController.m in Sources */,
 				A0D6123522759BF1004D5DAE /* ZFPlayerController.m in Sources */,
 				A0D6123022759BF1004D5DAE /* UIImageView+ZFCache.m in Sources */,
+				A0AFD5762276EE6C00F7A5AD /* NSDate+BRPickerView.m in Sources */,
 				A0D6123822759BF1004D5DAE /* UIScrollView+ZFPlayer.m in Sources */,
 				A0D6124322759DD8004D5DAE /* PublicAlertViewController.m in Sources */,
 				A057061D22730F9100B16D9F /* PhotoZoomView.m in Sources */,
@@ -903,18 +1009,22 @@
 				A0AFD55D2276A6C100F7A5AD /* UIView+HKFrame.m in Sources */,
 				A0D6123D22759BF1004D5DAE /* ZFReachabilityManager.m in Sources */,
 				A0D611BC22758748004D5DAE /* MultiPhotoTableViewCell.m in Sources */,
+				A0AFD5752276EE6C00F7A5AD /* BRStringPickerView.m in Sources */,
 				A0D6124722759E1D004D5DAE /* PublicAlertView.m in Sources */,
 				A0D6124A2275A072004D5DAE /* InfoAnnexInfoModel.m in Sources */,
+				A0AFD5782276EE6C00F7A5AD /* BRBaseView.m in Sources */,
 				A0D611A922755AA1004D5DAE /* ZWVerifyCodeCursorView.m in Sources */,
 				A0D6122B22759BF1004D5DAE /* ZFPlayerControlView.m in Sources */,
 				A0D6123422759BF1004D5DAE /* ZFPlayerGestureControl.m in Sources */,
 				A0D6122722759BF1004D5DAE /* ZFVolumeBrightnessView.m in Sources */,
+				A0AFD57E2276EFB500F7A5AD /* NSDate+Date.m in Sources */,
 				A0AFD55722769E3200F7A5AD /* PickerViewController2.m in Sources */,
 				A0D6122E22759BF1004D5DAE /* ZFSpeedLoadingView.m in Sources */,
 				A05706282273198000B16D9F /* PictureBrowerViewController.m in Sources */,
 				A0D6123122759BF1004D5DAE /* ZFIJKPlayerManager.m in Sources */,
 				A0AFD55A22769E5C00F7A5AD /* MultiPhotoAddView.m in Sources */,
 				A0D6122822759BF1004D5DAE /* ZFLandScapeControlView.m in Sources */,
+				A0AFD5792276EE6C00F7A5AD /* BRAddressModel.m in Sources */,
 				A0D611E2227598D7004D5DAE /* ImagePhotoBrowerViewController.m in Sources */,
 				A0D6122C22759BF1004D5DAE /* ZFSmallFloatControlView.m in Sources */,
 				A0D6123E22759BF1004D5DAE /* UIViewController+ZFPlayerRotation.m in Sources */,

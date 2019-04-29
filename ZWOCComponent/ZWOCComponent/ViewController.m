@@ -14,6 +14,9 @@
 #import "CommonDefine.h"
 #import "PickerViewController.h"
 #import "PickerViewController2.h"
+#import "BRAddressPickerView.h"
+#import "NSDate+Date.h"
+#import <YYKit/YYKit.h>
 
 @interface ViewController ()
 
@@ -24,15 +27,17 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    PickerViewController2 *pvc = [PickerViewController2 new];
-    pvc.isCanEditing = YES;
-    [self.navigationController pushViewController:pvc animated:YES];
+//    PickerViewController2 *pvc = [PickerViewController2 new];
+//    pvc.isCanEditing = YES;
+//    [self.navigationController pushViewController:pvc animated:YES];
 }
 
 - (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
-    PickerViewController *pvc = [PickerViewController new];
-    pvc.isCanEditing = YES;
-    [self.navigationController pushViewController:pvc animated:YES];
+//    PickerViewController *pvc = [PickerViewController new];
+//    pvc.isCanEditing = YES;
+//    [self.navigationController pushViewController:pvc animated:YES];
+    
+    
 }
 
 
