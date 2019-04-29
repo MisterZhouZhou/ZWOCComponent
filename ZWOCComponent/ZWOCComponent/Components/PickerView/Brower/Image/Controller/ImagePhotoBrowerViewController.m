@@ -12,7 +12,6 @@
 #import "UIColor+Color.h"
 #import "MBProgressHUD+XY.h"
 #import "UIImage+Gif.h"
-#import "PictureBrowseView.h"
 #import "PhotoZoomView.h"
 
 #define SCREEN_WIDTH [UIScreen mainScreen].bounds.size.width

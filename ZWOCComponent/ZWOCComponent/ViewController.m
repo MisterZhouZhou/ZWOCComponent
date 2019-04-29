@@ -13,6 +13,7 @@
 #import "ZWVerifyCodeCursorView.h"
 #import "CommonDefine.h"
 #import "PickerViewController.h"
+#import "PickerViewController2.h"
 
 @interface ViewController ()
 
@@ -22,10 +23,10 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    PictureBrowerViewController *pVC = [PictureBrowerViewController new];
-    pVC.urlsArray = @[@"https://avatar.csdn.net/5/F/0/3_zww1984774346.jpg", @"https://avatar.csdn.net/5/F/0/3_zww1984774346.jpg",@"http://img.soogif.com/5dThPALQIVEQvUa2QDKqT3ju2X82MIIW.gif"];
-    [self.navigationController pushViewController:pVC animated:YES];
-
+    
+    PickerViewController2 *pvc = [PickerViewController2 new];
+    pvc.isCanEditing = YES;
+    [self.navigationController pushViewController:pvc animated:YES];
 }
 
 - (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {

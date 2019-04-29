@@ -13,9 +13,8 @@
 #import "UIImage+Gif.h"
 #import <Photos/Photos.h>
 
-@interface PhotoZoomView()<UIScrollViewDelegate>
+@interface PhotoZoomView()<UIScrollViewDelegate, UIGestureRecognizerDelegate>
 
-@property (nonatomic, strong) UIImageView * imageView;    // 图片
 @property (nonatomic , strong) ProgressView *progressView;
 
 @end
@@ -51,11 +50,29 @@
 
 #pragma mark 初始化手势
 - (void)addGestureRecognizer {
-//    self.userInteractionEnabled = YES;
     // 双击手势
     UITapGestureRecognizer * doubleTap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(doubleTap:)];
     doubleTap.numberOfTapsRequired = 2;
     [self.imageView addGestureRecognizer:doubleTap];
+    
+    // 背景点击手势添加
+    UITapGestureRecognizer * tap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(tap:)];
+    tap.delegate = self;
+    [self addGestureRecognizer:tap];
+}
+
+#pragma mark 解决手势冲突问题
+- (BOOL)gestureRecognizer:(UIGestureRecognizer *)gestureRecognizer shouldReceiveTouch:(UITouch *)touch {
+    if ([touch.view isKindOfClass:[UIScrollView class]]) {
+        return YES;
+    }
+    return NO;
+}
+
+- (void)tap:(UITapGestureRecognizer *)taps {
+    if(self.bgClick){
+        self.bgClick();
+    }
 }
 
 - (void)doubleTap:(UITapGestureRecognizer *)tap {
@@ -131,19 +148,29 @@
 -(void)setImage:(UIImage *)image {
     _image = image;
     if (image) {
-        [self.progressView removeFromSuperview];
-        [self.progressView removeFromSuperview];
+        // 本地图片，制作假进度
+        self.progressView.progress = 0;
         self.imageView.image = image;
+        [UIView animateWithDuration:0.25 animations:^{
+            self.progressView.progress = 1;
+        }];
+        [self.progressView removeFromSuperview];
     }
 }
 
 #pragma mark 设置asset image
 -(void)setAssetImage:(PHAsset *)assetImage {
     _assetImage = assetImage;
-    [self.progressView removeFromSuperview];
+    // 本地图片，制作假进度
+    self.progressView.progress = 0;
     // 从相册获取gif
+    kWeakSelf(self)
     [self getOriginalPhotoDataWithAsset:assetImage completion:^(NSData *data, NSDictionary *info, BOOL isDegraded) {
-        self.imageView.image = [UIImage sd_imageWithGIFData:data];
+        weakself.imageView.image = [UIImage sd_imageWithGIFData:data];
+        [UIView animateWithDuration:0.25 animations:^{
+             weakself.progressView.progress = 1;
+        }];
+        [weakself.progressView removeFromSuperview];
     }];
 }
 

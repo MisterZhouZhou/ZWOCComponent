@@ -22,6 +22,10 @@
 		A05706202273121C00B16D9F /* PictureBrowseView.m in Sources */ = {isa = PBXBuildFile; fileRef = A057061F2273121C00B16D9F /* PictureBrowseView.m */; };
 		A0570623227315A800B16D9F /* ProgressView.m in Sources */ = {isa = PBXBuildFile; fileRef = A0570622227315A800B16D9F /* ProgressView.m */; };
 		A05706282273198000B16D9F /* PictureBrowerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A05706272273198000B16D9F /* PictureBrowerViewController.m */; };
+		A0AFD55722769E3200F7A5AD /* PickerViewController2.m in Sources */ = {isa = PBXBuildFile; fileRef = A0AFD55622769E3200F7A5AD /* PickerViewController2.m */; };
+		A0AFD55A22769E5C00F7A5AD /* MultiPhotoAddView.m in Sources */ = {isa = PBXBuildFile; fileRef = A0AFD55922769E5C00F7A5AD /* MultiPhotoAddView.m */; };
+		A0AFD55D2276A6C100F7A5AD /* UIView+HKFrame.m in Sources */ = {isa = PBXBuildFile; fileRef = A0AFD55B2276A6C100F7A5AD /* UIView+HKFrame.m */; };
+		A0AFD5602276C1EE00F7A5AD /* MultiPhotoPreView.m in Sources */ = {isa = PBXBuildFile; fileRef = A0AFD55F2276C1EE00F7A5AD /* MultiPhotoPreView.m */; };
 		A0D611A922755AA1004D5DAE /* ZWVerifyCodeCursorView.m in Sources */ = {isa = PBXBuildFile; fileRef = A0D611A822755AA1004D5DAE /* ZWVerifyCodeCursorView.m */; };
 		A0D611AC22755B16004D5DAE /* ZWVerifyCodeCursorLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = A0D611AB22755B16004D5DAE /* ZWVerifyCodeCursorLabel.m */; };
 		A0D611AE22757AA3004D5DAE /* VerifyCodeReadMe.md in Resources */ = {isa = PBXBuildFile; fileRef = A0D611AD22757AA3004D5DAE /* VerifyCodeReadMe.md */; };
@@ -110,6 +114,14 @@
 		A05706252273163600B16D9F /* PhotoBrowerConfig.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PhotoBrowerConfig.h; sourceTree = "<group>"; };
 		A05706262273198000B16D9F /* PictureBrowerViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PictureBrowerViewController.h; sourceTree = "<group>"; };
 		A05706272273198000B16D9F /* PictureBrowerViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PictureBrowerViewController.m; sourceTree = "<group>"; };
+		A0AFD55522769E3200F7A5AD /* PickerViewController2.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PickerViewController2.h; sourceTree = "<group>"; };
+		A0AFD55622769E3200F7A5AD /* PickerViewController2.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PickerViewController2.m; sourceTree = "<group>"; };
+		A0AFD55822769E5C00F7A5AD /* MultiPhotoAddView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MultiPhotoAddView.h; sourceTree = "<group>"; };
+		A0AFD55922769E5C00F7A5AD /* MultiPhotoAddView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MultiPhotoAddView.m; sourceTree = "<group>"; };
+		A0AFD55B2276A6C100F7A5AD /* UIView+HKFrame.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+HKFrame.m"; sourceTree = "<group>"; };
+		A0AFD55C2276A6C100F7A5AD /* UIView+HKFrame.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+HKFrame.h"; sourceTree = "<group>"; };
+		A0AFD55E2276C1EE00F7A5AD /* MultiPhotoPreView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MultiPhotoPreView.h; sourceTree = "<group>"; };
+		A0AFD55F2276C1EE00F7A5AD /* MultiPhotoPreView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MultiPhotoPreView.m; sourceTree = "<group>"; };
 		A0D611A722755AA1004D5DAE /* ZWVerifyCodeCursorView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZWVerifyCodeCursorView.h; sourceTree = "<group>"; };
 		A0D611A822755AA1004D5DAE /* ZWVerifyCodeCursorView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZWVerifyCodeCursorView.m; sourceTree = "<group>"; };
 		A0D611AA22755B16004D5DAE /* ZWVerifyCodeCursorLabel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZWVerifyCodeCursorLabel.h; sourceTree = "<group>"; };
@@ -241,6 +253,8 @@
 		A00389A7227548BD005BE1EE /* UIView */ = {
 			isa = PBXGroup;
 			children = (
+				A0AFD55C2276A6C100F7A5AD /* UIView+HKFrame.h */,
+				A0AFD55B2276A6C100F7A5AD /* UIView+HKFrame.m */,
 			);
 			path = UIView;
 			sourceTree = "<group>";
@@ -455,6 +469,8 @@
 			children = (
 				A0D611B7227586B5004D5DAE /* PickerViewController.h */,
 				A0D611B8227586B5004D5DAE /* PickerViewController.m */,
+				A0AFD55522769E3200F7A5AD /* PickerViewController2.h */,
+				A0AFD55622769E3200F7A5AD /* PickerViewController2.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -466,6 +482,10 @@
 				A0D611BB22758748004D5DAE /* MultiPhotoTableViewCell.m */,
 				A0D611CC22759600004D5DAE /* MultiPhotoCollectionViewCell.h */,
 				A0D611CD22759600004D5DAE /* MultiPhotoCollectionViewCell.m */,
+				A0AFD55822769E5C00F7A5AD /* MultiPhotoAddView.h */,
+				A0AFD55922769E5C00F7A5AD /* MultiPhotoAddView.m */,
+				A0AFD55E2276C1EE00F7A5AD /* MultiPhotoPreView.h */,
+				A0AFD55F2276C1EE00F7A5AD /* MultiPhotoPreView.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -880,6 +900,7 @@
 				A05706052272E1D800B16D9F /* WebViewViewController.m in Sources */,
 				A0D6122422759BF1004D5DAE /* ZFUtilities.m in Sources */,
 				A05706202273121C00B16D9F /* PictureBrowseView.m in Sources */,
+				A0AFD55D2276A6C100F7A5AD /* UIView+HKFrame.m in Sources */,
 				A0D6123D22759BF1004D5DAE /* ZFReachabilityManager.m in Sources */,
 				A0D611BC22758748004D5DAE /* MultiPhotoTableViewCell.m in Sources */,
 				A0D6124722759E1D004D5DAE /* PublicAlertView.m in Sources */,
@@ -888,15 +909,18 @@
 				A0D6122B22759BF1004D5DAE /* ZFPlayerControlView.m in Sources */,
 				A0D6123422759BF1004D5DAE /* ZFPlayerGestureControl.m in Sources */,
 				A0D6122722759BF1004D5DAE /* ZFVolumeBrightnessView.m in Sources */,
+				A0AFD55722769E3200F7A5AD /* PickerViewController2.m in Sources */,
 				A0D6122E22759BF1004D5DAE /* ZFSpeedLoadingView.m in Sources */,
 				A05706282273198000B16D9F /* PictureBrowerViewController.m in Sources */,
 				A0D6123122759BF1004D5DAE /* ZFIJKPlayerManager.m in Sources */,
+				A0AFD55A22769E5C00F7A5AD /* MultiPhotoAddView.m in Sources */,
 				A0D6122822759BF1004D5DAE /* ZFLandScapeControlView.m in Sources */,
 				A0D611E2227598D7004D5DAE /* ImagePhotoBrowerViewController.m in Sources */,
 				A0D6122C22759BF1004D5DAE /* ZFSmallFloatControlView.m in Sources */,
 				A0D6123E22759BF1004D5DAE /* UIViewController+ZFPlayerRotation.m in Sources */,
 				A0D611CE22759600004D5DAE /* MultiPhotoCollectionViewCell.m in Sources */,
 				A0D6123A22759BF1004D5DAE /* ZFFloatView.m in Sources */,
+				A0AFD5602276C1EE00F7A5AD /* MultiPhotoPreView.m in Sources */,
 				A0D6123622759BF1004D5DAE /* ZFOrientationObserver.m in Sources */,
 				A05705E72272DF7500B16D9F /* AppDelegate.m in Sources */,
 			);
