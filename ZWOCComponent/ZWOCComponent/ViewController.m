@@ -18,7 +18,7 @@
 #import "NSDate+Date.h"
 #import <YYKit/YYKit.h>
 #import "CDDEmptView.h"
-#import "LimitPointTextField.h"
+#import "LimitCountTextField.h"
 
 @interface ViewController ()
 
@@ -29,13 +29,17 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    LimitPointTextField *field = [[LimitPointTextField alloc]initWithFrame:CGRectMake(10, 0, KScreenWidth-20, 40)];
-    field.backgroundColor = [UIColor redColor];
+    LimitCountTextField *field = [[LimitCountTextField alloc]initWithFrame:CGRectMake(10, 0, KScreenWidth-20, 40)];
+    field.layer.borderWidth = 1;
+    field.layer.borderColor = [UIColor redColor].CGColor;
+    field.limitCount = 11;
     [self.view addSubview:field];
     
-    LimitPointTextField *field2 = [[LimitPointTextField alloc]initWithFrame:CGRectMake(10, 60, KScreenWidth-20, 40)];
-    field2.limitNumPoint = 3;
-    field2.backgroundColor = [UIColor blueColor];
+    LimitCountTextField *field2 = [[LimitCountTextField alloc]initWithFrame:CGRectMake(10, 60, KScreenWidth-20, 40)];
+    field2.backgroundColor = [UIColor whiteColor];
+    field2.limitCount = 3;
+    field2.layer.borderWidth = 1;
+    field2.layer.borderColor = [UIColor blueColor].CGColor;
     [self.view addSubview:field2];
 }
 

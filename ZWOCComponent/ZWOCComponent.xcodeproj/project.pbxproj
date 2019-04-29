@@ -44,6 +44,7 @@
 		A0C12CA72276FC26009C7DA2 /* LYEmpytViewReadMe.md in Resources */ = {isa = PBXBuildFile; fileRef = A0C12CA62276FC26009C7DA2 /* LYEmpytViewReadMe.md */; };
 		A0C12CAA2276FCE3009C7DA2 /* LimitPointTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = A0C12CA92276FCE3009C7DA2 /* LimitPointTextField.m */; };
 		A0C12CAC227703B3009C7DA2 /* LimitPointTextFieldReadMe.md in Resources */ = {isa = PBXBuildFile; fileRef = A0C12CAB227703B3009C7DA2 /* LimitPointTextFieldReadMe.md */; };
+		A0C12CAF2277059E009C7DA2 /* LimitCountTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = A0C12CAE2277059E009C7DA2 /* LimitCountTextField.m */; };
 		A0D611A922755AA1004D5DAE /* ZWVerifyCodeCursorView.m in Sources */ = {isa = PBXBuildFile; fileRef = A0D611A822755AA1004D5DAE /* ZWVerifyCodeCursorView.m */; };
 		A0D611AC22755B16004D5DAE /* ZWVerifyCodeCursorLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = A0D611AB22755B16004D5DAE /* ZWVerifyCodeCursorLabel.m */; };
 		A0D611AE22757AA3004D5DAE /* VerifyCodeReadMe.md in Resources */ = {isa = PBXBuildFile; fileRef = A0D611AD22757AA3004D5DAE /* VerifyCodeReadMe.md */; };
@@ -175,6 +176,8 @@
 		A0C12CA82276FCE3009C7DA2 /* LimitPointTextField.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LimitPointTextField.h; sourceTree = "<group>"; };
 		A0C12CA92276FCE3009C7DA2 /* LimitPointTextField.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LimitPointTextField.m; sourceTree = "<group>"; };
 		A0C12CAB227703B3009C7DA2 /* LimitPointTextFieldReadMe.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = LimitPointTextFieldReadMe.md; sourceTree = "<group>"; };
+		A0C12CAD2277059E009C7DA2 /* LimitCountTextField.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LimitCountTextField.h; sourceTree = "<group>"; };
+		A0C12CAE2277059E009C7DA2 /* LimitCountTextField.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LimitCountTextField.m; sourceTree = "<group>"; };
 		A0D611A722755AA1004D5DAE /* ZWVerifyCodeCursorView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZWVerifyCodeCursorView.h; sourceTree = "<group>"; };
 		A0D611A822755AA1004D5DAE /* ZWVerifyCodeCursorView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZWVerifyCodeCursorView.m; sourceTree = "<group>"; };
 		A0D611AA22755B16004D5DAE /* ZWVerifyCodeCursorLabel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZWVerifyCodeCursorLabel.h; sourceTree = "<group>"; };
@@ -567,6 +570,8 @@
 				A0C12CA82276FCE3009C7DA2 /* LimitPointTextField.h */,
 				A0C12CA92276FCE3009C7DA2 /* LimitPointTextField.m */,
 				A0C12CAB227703B3009C7DA2 /* LimitPointTextFieldReadMe.md */,
+				A0C12CAD2277059E009C7DA2 /* LimitCountTextField.h */,
+				A0C12CAE2277059E009C7DA2 /* LimitCountTextField.m */,
 			);
 			path = NumberPointTextField;
 			sourceTree = "<group>";
@@ -1057,6 +1062,7 @@
 				A0D611B322757CF3004D5DAE /* ZWVerityCodeLineView.m in Sources */,
 				A0D611AC22755B16004D5DAE /* ZWVerifyCodeCursorLabel.m in Sources */,
 				A0AFD5772276EE6C00F7A5AD /* BRDatePickerView.m in Sources */,
+				A0C12CAF2277059E009C7DA2 /* LimitCountTextField.m in Sources */,
 				A0D6122522759BF1004D5DAE /* UIView+ZFFrame.m in Sources */,
 				A0AFD57A2276EE6C00F7A5AD /* BRAddressPickerView.m in Sources */,
 				A0C12CA02276FA04009C7DA2 /* UIView+LYExtension.m in Sources */,
