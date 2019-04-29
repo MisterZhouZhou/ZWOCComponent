@@ -108,7 +108,6 @@
         }else{
             photoZoomView.image    = gallery.image;
         }
-        photoZoomView.backgroundColor =[UIColor redColor];
         [self.scrollView addSubview:photoZoomView];
     }
     if (self.selectedIndex != 0) {

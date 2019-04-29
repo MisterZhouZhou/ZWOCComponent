@@ -28,7 +28,7 @@
     ImageMultiPhotoModel *model = [ImageMultiPhotoModel new];
     model.url = @"https://n.sinaimg.cn/tech/transform/650/w436h214/20190428/F3fs-hwfpcxm6920745.gif";
     model.typeId = 12000;
-    NSArray *items = @[model];
+    NSMutableArray *items = [NSMutableArray arrayWithObjects:model, nil];
     [self.selectedPhotosDict setObject:items forKey:@"12000"];
 }
 

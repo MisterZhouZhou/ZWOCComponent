@@ -132,6 +132,7 @@
     _image = image;
     if (image) {
         [self.progressView removeFromSuperview];
+        [self.progressView removeFromSuperview];
         self.imageView.image = image;
     }
 }
@@ -139,6 +140,7 @@
 #pragma mark 设置asset image
 -(void)setAssetImage:(PHAsset *)assetImage {
     _assetImage = assetImage;
+    [self.progressView removeFromSuperview];
     // 从相册获取gif
     [self getOriginalPhotoDataWithAsset:assetImage completion:^(NSData *data, NSDictionary *info, BOOL isDegraded) {
         self.imageView.image = [UIImage sd_imageWithGIFData:data];
