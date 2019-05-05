@@ -10,17 +10,6 @@
 
 @implementation NSString (String)
 
-- (NSString *)stringByTrim {
-    NSCharacterSet *set = [NSCharacterSet whitespaceAndNewlineCharacterSet];
-    return [self stringByTrimmingCharactersInSet:set];
-}
-
-- (CGSize)sizeWithFont:(UIFont *)font maxSize:(CGSize)maxSize
-{
-    NSDictionary *attrs = @{NSFontAttributeName : font};
-    return [self boundingRectWithSize:maxSize options:NSStringDrawingUsesLineFragmentOrigin attributes:attrs context:nil].size;
-}
-
 #pragma mark - 设置字符串指定范围的字体颜色
 - (NSMutableAttributedString*)setRangeColorWithstartString:(NSString *)start endString:(NSString *)end andMarkColor:(UIColor *)markColor andMarkFondSize:(float)fontSize fontName: (NSString *)fontname {
     NSMutableAttributedString *strAtt = [[NSMutableAttributedString alloc] initWithString:self];

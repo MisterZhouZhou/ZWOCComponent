@@ -11,16 +11,6 @@
 @interface NSString (String)
 
 /**
- * 字符串去除首位空格
- */
-- (NSString *)stringByTrim;
-
-/**
- * 计算字符串size
- */
-- (CGSize)sizeWithFont:(UIFont *)font maxSize:(CGSize)maxSize;
-
-/**
  * 设置字符串指定范围的字体颜色
  * @param start 开始的字符
  * @param end 结束的字符
