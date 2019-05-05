@@ -60,6 +60,8 @@
 #define ValidClass(f,cls) (f!=nil && [f isKindOfClass:[cls class]])
 #define ValidData(f) (f!=nil && [f isKindOfClass:[NSData class]])
 
+//发送通知
+#define KPostNotification(name,obj) [[NSNotificationCenter defaultCenter] postNotificationName:name object:obj];
 
 //单例化一个类
 #define SINGLETON_FOR_HEADER(className) \

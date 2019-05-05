@@ -21,6 +21,7 @@
 #import "LimitCountTextField.h"
 #import "ZWTextView.h"
 #import "AXRatingView.h"
+
 @interface ViewController ()
 
 
@@ -30,13 +31,13 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
+  
     
 }
 
-- (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
-    
-}
+//- (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
+//
+//}
 
 
 - (void)didReceiveMemoryWarning {
