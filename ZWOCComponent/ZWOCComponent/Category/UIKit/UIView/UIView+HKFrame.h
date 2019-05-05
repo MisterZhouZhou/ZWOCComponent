@@ -37,4 +37,10 @@
 - (CGFloat)right;
 - (void)setRight:(CGFloat)right;
 
+- (CGFloat)centerX;
+-(void)setCenterX:(CGFloat)newCenterX;
+
+-(CGFloat)centerY;
+-(void)setCenterY:(CGFloat)newCenterY;
+
 @end

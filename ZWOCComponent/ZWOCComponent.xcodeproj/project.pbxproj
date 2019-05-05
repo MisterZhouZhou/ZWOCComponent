@@ -25,6 +25,8 @@
 		A002B93E227EC7C800559B13 /* IdcardQuality.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = A07D5188227E9645000196ED /* IdcardQuality.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		A002B942227ECD5D00559B13 /* Aspects.m in Sources */ = {isa = PBXBuildFile; fileRef = A002B940227ECD5D00559B13 /* Aspects.m */; };
 		A002B944227ECD6F00559B13 /* AspectsReadMe.md in Resources */ = {isa = PBXBuildFile; fileRef = A002B943227ECD6F00559B13 /* AspectsReadMe.md */; };
+		A002B948227ECFCF00559B13 /* CommentView.m in Sources */ = {isa = PBXBuildFile; fileRef = A002B947227ECFCF00559B13 /* CommentView.m */; };
+		A002B94A227EE67E00559B13 /* CommentViewReadMe.md in Resources */ = {isa = PBXBuildFile; fileRef = A002B949227EE67E00559B13 /* CommentViewReadMe.md */; };
 		A05705E72272DF7500B16D9F /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A05705E62272DF7500B16D9F /* AppDelegate.m */; };
 		A05705EA2272DF7500B16D9F /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A05705E92272DF7500B16D9F /* ViewController.m */; };
 		A05705ED2272DF7500B16D9F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A05705EB2272DF7500B16D9F /* Main.storyboard */; };
@@ -171,6 +173,9 @@
 		A002B940227ECD5D00559B13 /* Aspects.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Aspects.m; sourceTree = "<group>"; };
 		A002B941227ECD5D00559B13 /* Aspects.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Aspects.h; sourceTree = "<group>"; };
 		A002B943227ECD6F00559B13 /* AspectsReadMe.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = AspectsReadMe.md; sourceTree = "<group>"; };
+		A002B946227ECFCF00559B13 /* CommentView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CommentView.h; sourceTree = "<group>"; };
+		A002B947227ECFCF00559B13 /* CommentView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CommentView.m; sourceTree = "<group>"; };
+		A002B949227EE67E00559B13 /* CommentViewReadMe.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = CommentViewReadMe.md; sourceTree = "<group>"; };
 		A05705E22272DF7400B16D9F /* ZWOCComponent.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ZWOCComponent.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A05705E52272DF7500B16D9F /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		A05705E62272DF7500B16D9F /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -449,6 +454,16 @@
 			path = Aspects;
 			sourceTree = "<group>";
 		};
+		A002B945227ECFBF00559B13 /* CommentView */ = {
+			isa = PBXGroup;
+			children = (
+				A002B946227ECFCF00559B13 /* CommentView.h */,
+				A002B947227ECFCF00559B13 /* CommentView.m */,
+				A002B949227EE67E00559B13 /* CommentViewReadMe.md */,
+			);
+			path = CommentView;
+			sourceTree = "<group>";
+		};
 		A00389A6227548AF005BE1EE /* UIKit */ = {
 			isa = PBXGroup;
 			children = (
@@ -515,6 +530,7 @@
 		A05705FB2272DF8A00B16D9F /* Components */ = {
 			isa = PBXGroup;
 			children = (
+				A002B945227ECFBF00559B13 /* CommentView */,
 				A07D5174227E8DF0000196ED /* AXRatingView */,
 				A07D5171227E7FCA000196ED /* TextView */,
 				A0C12C912276FA04009C7DA2 /* LYEmptyView */,
@@ -1243,6 +1259,7 @@
 				A0D6122622759BF1004D5DAE /* CDDMoviePlayerComponentsModules.bundle in Resources */,
 				A0D611D822759769004D5DAE /* But_add_pic@3x.png in Resources */,
 				A0AFD5802276F15E00F7A5AD /* BRPickerViewReadMe.md in Resources */,
+				A002B94A227EE67E00559B13 /* CommentViewReadMe.md in Resources */,
 				A0D611DA22759769004D5DAE /* videoPreviewPlayHL@2x.png in Resources */,
 				A07D5180227E94FA000196ED /* AESCipherReadMe.md in Resources */,
 				A0C12CA72276FC26009C7DA2 /* LYEmpytViewReadMe.md in Resources */,
@@ -1326,6 +1343,7 @@
 				A0C12CA02276FA04009C7DA2 /* UIView+LYExtension.m in Sources */,
 				A07D5194227E9646000196ED /* BaiduORCManager.m in Sources */,
 				A0D611B9227586B5004D5DAE /* PickerViewController.m in Sources */,
+				A002B948227ECFCF00559B13 /* CommentView.m in Sources */,
 				A07D519B227E9646000196ED /* PPNetworkCache.m in Sources */,
 				A0D6123522759BF1004D5DAE /* ZFPlayerController.m in Sources */,
 				A0D6123022759BF1004D5DAE /* UIImageView+ZFCache.m in Sources */,

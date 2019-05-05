@@ -79,4 +79,18 @@
     self.frame = CGRectMake(right - self.width, self.y, self.width, self.height);
 }
 
+-(CGFloat)centerX {
+    return self.center.x;
+}
+-(void)setCenterX:(CGFloat)newCenterX {
+    self.center = CGPointMake(newCenterX, self.centerY);
+}
+
+-(CGFloat)centerY {
+    return self.center.y;
+}
+-(void)setCenterY:(CGFloat)newCenterY {
+    self.center = CGPointMake(self.centerX, newCenterY);
+}
+
 @end

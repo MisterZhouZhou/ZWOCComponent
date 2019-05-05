@@ -21,7 +21,7 @@
 #import "LimitCountTextField.h"
 #import "ZWTextView.h"
 #import "AXRatingView.h"
-
+#import "CommentView.h"
 @interface ViewController ()
 
 
@@ -32,7 +32,9 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
   
-    
+    CommentView *commnetView = [[CommentView alloc]initWithFrame:CGRectMake(0, kScreenHeight-64-40, KScreenWidth, 40)];
+    commnetView.backgroundColor = [UIColor redColor];
+    [self.view addSubview:commnetView];
 }
 
 //- (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
