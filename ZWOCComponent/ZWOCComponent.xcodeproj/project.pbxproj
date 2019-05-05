@@ -23,6 +23,8 @@
 		A002B93C227EC7C400559B13 /* AipBase.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = A07D5185227E9645000196ED /* AipBase.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		A002B93D227EC7C800559B13 /* IdcardQuality.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A07D5188227E9645000196ED /* IdcardQuality.framework */; };
 		A002B93E227EC7C800559B13 /* IdcardQuality.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = A07D5188227E9645000196ED /* IdcardQuality.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		A002B942227ECD5D00559B13 /* Aspects.m in Sources */ = {isa = PBXBuildFile; fileRef = A002B940227ECD5D00559B13 /* Aspects.m */; };
+		A002B944227ECD6F00559B13 /* AspectsReadMe.md in Resources */ = {isa = PBXBuildFile; fileRef = A002B943227ECD6F00559B13 /* AspectsReadMe.md */; };
 		A05705E72272DF7500B16D9F /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A05705E62272DF7500B16D9F /* AppDelegate.m */; };
 		A05705EA2272DF7500B16D9F /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A05705E92272DF7500B16D9F /* ViewController.m */; };
 		A05705ED2272DF7500B16D9F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A05705EB2272DF7500B16D9F /* Main.storyboard */; };
@@ -166,6 +168,9 @@
 		A002B933227EC52A00559B13 /* UIView+Extension.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIView+Extension.h"; sourceTree = "<group>"; };
 		A002B934227EC52A00559B13 /* UIView+Extension.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIView+Extension.m"; sourceTree = "<group>"; };
 		A002B936227EC74100559B13 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		A002B940227ECD5D00559B13 /* Aspects.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Aspects.m; sourceTree = "<group>"; };
+		A002B941227ECD5D00559B13 /* Aspects.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Aspects.h; sourceTree = "<group>"; };
+		A002B943227ECD6F00559B13 /* AspectsReadMe.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = AspectsReadMe.md; sourceTree = "<group>"; };
 		A05705E22272DF7400B16D9F /* ZWOCComponent.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ZWOCComponent.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A05705E52272DF7500B16D9F /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		A05705E62272DF7500B16D9F /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -434,6 +439,16 @@
 			path = UITextView;
 			sourceTree = "<group>";
 		};
+		A002B93F227ECD4000559B13 /* Aspects */ = {
+			isa = PBXGroup;
+			children = (
+				A002B941227ECD5D00559B13 /* Aspects.h */,
+				A002B940227ECD5D00559B13 /* Aspects.m */,
+				A002B943227ECD6F00559B13 /* AspectsReadMe.md */,
+			);
+			path = Aspects;
+			sourceTree = "<group>";
+		};
 		A00389A6227548AF005BE1EE /* UIKit */ = {
 			isa = PBXGroup;
 			children = (
@@ -662,6 +677,7 @@
 		A07D517A227E945D000196ED /* Tools */ = {
 			isa = PBXGroup;
 			children = (
+				A002B93F227ECD4000559B13 /* Aspects */,
 				A07D5181227E9645000196ED /* BDManager */,
 				A07D518C227E9645000196ED /* NetWork */,
 				A07D5189227E9645000196ED /* OpenUDID */,
@@ -1214,6 +1230,7 @@
 				A0C12CAC227703B3009C7DA2 /* LimitPointTextFieldReadMe.md in Resources */,
 				A0D611B022757B02004D5DAE /* PhotoBrowerReadMe.md in Resources */,
 				A0D6124D2275A0CF004D5DAE /* icon_back@2x.png in Resources */,
+				A002B944227ECD6F00559B13 /* AspectsReadMe.md in Resources */,
 				A0D6124E2275A0CF004D5DAE /* icon_back@3x.png in Resources */,
 				A05705EF2272DF7600B16D9F /* Assets.xcassets in Resources */,
 				A0D611D922759769004D5DAE /* videoPreviewPlay@2x.png in Resources */,
@@ -1345,6 +1362,7 @@
 				A0AFD5782276EE6C00F7A5AD /* BRBaseView.m in Sources */,
 				A0D611A922755AA1004D5DAE /* ZWVerifyCodeCursorView.m in Sources */,
 				A0D6122B22759BF1004D5DAE /* ZFPlayerControlView.m in Sources */,
+				A002B942227ECD5D00559B13 /* Aspects.m in Sources */,
 				A0D6123422759BF1004D5DAE /* ZFPlayerGestureControl.m in Sources */,
 				A0C12C9F2276FA04009C7DA2 /* UIView+Empty.m in Sources */,
 				A0D6122722759BF1004D5DAE /* ZFVolumeBrightnessView.m in Sources */,
