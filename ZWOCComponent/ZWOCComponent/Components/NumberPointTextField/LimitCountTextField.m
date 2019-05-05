@@ -26,6 +26,7 @@
         self.isEditing = YES;
         self.limitCount = 9999;
         self.placeholder = @"请输入";
+        self.textAlignment = NSTextAlignmentLeft;
         [self initView];
         [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(textFieldDidChange) name:UITextFieldTextDidChangeNotification object:nil];
     }
@@ -83,7 +84,7 @@
         _textField.clearButtonMode = UITextFieldViewModeWhileEditing;
         _textField.font = [UIFont systemFontOfSize:15];
         _textField.textColor = [UIColor colorWithHexString:@"#666666"];
-        _textField.textAlignment = NSTextAlignmentRight;
+        _textField.textAlignment = self.textAlignment;
         _textField.placeholder = self.placeholder;
         [_textField setValue:[UIColor colorWithHexString:@"#C4C4C4"] forKeyPath:@"_placeholderLabel.textColor"];
         [_textField setValue:[UIFont systemFontOfSize:15] forKeyPath:@"_placeholderLabel.font"];
@@ -93,7 +94,7 @@
 
 -(void)layoutSubviews {
     [super layoutSubviews];
-    self.textField.frame = self.bounds;
+    self.textField.frame = CGRectMake(5, 0, CGRectGetWidth(self.bounds)-10, CGRectGetHeight(self.bounds));
 }
 
 - (void)dealloc {

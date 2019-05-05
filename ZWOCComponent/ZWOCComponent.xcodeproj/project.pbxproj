@@ -22,6 +22,10 @@
 		A05706202273121C00B16D9F /* PictureBrowseView.m in Sources */ = {isa = PBXBuildFile; fileRef = A057061F2273121C00B16D9F /* PictureBrowseView.m */; };
 		A0570623227315A800B16D9F /* ProgressView.m in Sources */ = {isa = PBXBuildFile; fileRef = A0570622227315A800B16D9F /* ProgressView.m */; };
 		A05706282273198000B16D9F /* PictureBrowerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A05706272273198000B16D9F /* PictureBrowerViewController.m */; };
+		A07D5170227E7FC0000196ED /* ZWTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = A07D516F227E7FC0000196ED /* ZWTextView.m */; };
+		A07D5173227E886E000196ED /* ZWTextViewReadMe.md in Resources */ = {isa = PBXBuildFile; fileRef = A07D5172227E886E000196ED /* ZWTextViewReadMe.md */; };
+		A07D5177227E8E26000196ED /* AXRatingView.m in Sources */ = {isa = PBXBuildFile; fileRef = A07D5176227E8E26000196ED /* AXRatingView.m */; };
+		A07D5179227E911F000196ED /* AXRatingViewReadMe.md in Resources */ = {isa = PBXBuildFile; fileRef = A07D5178227E911F000196ED /* AXRatingViewReadMe.md */; };
 		A0AFD55722769E3200F7A5AD /* PickerViewController2.m in Sources */ = {isa = PBXBuildFile; fileRef = A0AFD55622769E3200F7A5AD /* PickerViewController2.m */; };
 		A0AFD55A22769E5C00F7A5AD /* MultiPhotoAddView.m in Sources */ = {isa = PBXBuildFile; fileRef = A0AFD55922769E5C00F7A5AD /* MultiPhotoAddView.m */; };
 		A0AFD55D2276A6C100F7A5AD /* UIView+HKFrame.m in Sources */ = {isa = PBXBuildFile; fileRef = A0AFD55B2276A6C100F7A5AD /* UIView+HKFrame.m */; };
@@ -133,6 +137,12 @@
 		A05706252273163600B16D9F /* PhotoBrowerConfig.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PhotoBrowerConfig.h; sourceTree = "<group>"; };
 		A05706262273198000B16D9F /* PictureBrowerViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PictureBrowerViewController.h; sourceTree = "<group>"; };
 		A05706272273198000B16D9F /* PictureBrowerViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PictureBrowerViewController.m; sourceTree = "<group>"; };
+		A07D516E227E7FC0000196ED /* ZWTextView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZWTextView.h; sourceTree = "<group>"; };
+		A07D516F227E7FC0000196ED /* ZWTextView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZWTextView.m; sourceTree = "<group>"; };
+		A07D5172227E886E000196ED /* ZWTextViewReadMe.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = ZWTextViewReadMe.md; sourceTree = "<group>"; };
+		A07D5175227E8E26000196ED /* AXRatingView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AXRatingView.h; sourceTree = "<group>"; };
+		A07D5176227E8E26000196ED /* AXRatingView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AXRatingView.m; sourceTree = "<group>"; };
+		A07D5178227E911F000196ED /* AXRatingViewReadMe.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = AXRatingViewReadMe.md; sourceTree = "<group>"; };
 		A0AFD55522769E3200F7A5AD /* PickerViewController2.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PickerViewController2.h; sourceTree = "<group>"; };
 		A0AFD55622769E3200F7A5AD /* PickerViewController2.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PickerViewController2.m; sourceTree = "<group>"; };
 		A0AFD55822769E5C00F7A5AD /* MultiPhotoAddView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MultiPhotoAddView.h; sourceTree = "<group>"; };
@@ -356,6 +366,8 @@
 		A05705FB2272DF8A00B16D9F /* Components */ = {
 			isa = PBXGroup;
 			children = (
+				A07D5174227E8DF0000196ED /* AXRatingView */,
+				A07D5171227E7FCA000196ED /* TextView */,
 				A0C12C912276FA04009C7DA2 /* LYEmptyView */,
 				A0C12C902276F95B009C7DA2 /* NumberPointTextField */,
 				A0AFD5612276EE6C00F7A5AD /* BRPickerView */,
@@ -490,6 +502,26 @@
 				A05706252273163600B16D9F /* PhotoBrowerConfig.h */,
 			);
 			path = Config;
+			sourceTree = "<group>";
+		};
+		A07D5171227E7FCA000196ED /* TextView */ = {
+			isa = PBXGroup;
+			children = (
+				A07D516E227E7FC0000196ED /* ZWTextView.h */,
+				A07D516F227E7FC0000196ED /* ZWTextView.m */,
+				A07D5172227E886E000196ED /* ZWTextViewReadMe.md */,
+			);
+			path = TextView;
+			sourceTree = "<group>";
+		};
+		A07D5174227E8DF0000196ED /* AXRatingView */ = {
+			isa = PBXGroup;
+			children = (
+				A07D5175227E8E26000196ED /* AXRatingView.h */,
+				A07D5176227E8E26000196ED /* AXRatingView.m */,
+				A07D5178227E911F000196ED /* AXRatingViewReadMe.md */,
+			);
+			path = AXRatingView;
 			sourceTree = "<group>";
 		};
 		A0AFD5612276EE6C00F7A5AD /* BRPickerView */ = {
@@ -984,7 +1016,9 @@
 				A0D6124E2275A0CF004D5DAE /* icon_back@3x.png in Resources */,
 				A05705EF2272DF7600B16D9F /* Assets.xcassets in Resources */,
 				A0D611D922759769004D5DAE /* videoPreviewPlay@2x.png in Resources */,
+				A07D5173227E886E000196ED /* ZWTextViewReadMe.md in Resources */,
 				A0C12C8F2276F6A7009C7DA2 /* BRPickerView.bundle in Resources */,
+				A07D5179227E911F000196ED /* AXRatingViewReadMe.md in Resources */,
 				A0D611D722759769004D5DAE /* But_add_pic@2x.png in Resources */,
 				A05705ED2272DF7500B16D9F /* Main.storyboard in Resources */,
 				A0D611CB227595C8004D5DAE /* bitmap@2x.png in Resources */,
@@ -1084,7 +1118,9 @@
 				A05706052272E1D800B16D9F /* WebViewViewController.m in Sources */,
 				A0D6122422759BF1004D5DAE /* ZFUtilities.m in Sources */,
 				A05706202273121C00B16D9F /* PictureBrowseView.m in Sources */,
+				A07D5170227E7FC0000196ED /* ZWTextView.m in Sources */,
 				A0C12C9D2276FA04009C7DA2 /* CDDEmptView.m in Sources */,
+				A07D5177227E8E26000196ED /* AXRatingView.m in Sources */,
 				A0AFD55D2276A6C100F7A5AD /* UIView+HKFrame.m in Sources */,
 				A0D6123D22759BF1004D5DAE /* ZFReachabilityManager.m in Sources */,
 				A0C12CAA2276FCE3009C7DA2 /* LimitPointTextField.m in Sources */,
