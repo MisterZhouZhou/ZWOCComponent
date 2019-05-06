@@ -80,4 +80,15 @@
     return nil;
 }
 
+-(void) addToWindow
+{
+    id appDelegate = [[UIApplication sharedApplication] delegate];
+    if ([appDelegate respondsToSelector:@selector(window)])
+    {
+        UIWindow * window = (UIWindow *) [appDelegate performSelector:@selector(window)];
+        [window addSubview:self];
+    }
+}
+
+
 @end

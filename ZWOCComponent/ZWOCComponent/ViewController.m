@@ -22,8 +22,8 @@
 #import "ZWTextView.h"
 #import "AXRatingView.h"
 #import "CommentView.h"
-@interface ViewController ()
 
+@interface ViewController ()
 
 @end
 
@@ -32,14 +32,17 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
   
-    CommentView *commnetView = [[CommentView alloc]initWithFrame:CGRectMake(0, kScreenHeight-64-40, KScreenWidth, 40)];
-    commnetView.backgroundColor = [UIColor redColor];
-    [self.view addSubview:commnetView];
 }
 
-//- (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
-//
-//}
+- (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
+   
+    PickerViewController2 *vc = [PickerViewController2 new];
+    [self.navigationController pushViewController:vc animated:YES];
+   
+//    BOOL hasName = [self respondsToSelector:@selector(name)];
+//    id name = [self performSelector:@selector(name)];
+//    NSLog(@"%@==%@", vc, name);
+}
 
 
 - (void)didReceiveMemoryWarning {

@@ -10,6 +10,7 @@
 #import "RootViewController.h"
 @interface ViewController : RootViewController
 
+@property (nonatomic, copy) NSString *birthday;
 
 @end
 

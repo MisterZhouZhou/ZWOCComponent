@@ -42,4 +42,7 @@
  */
 - (UIViewController *)viewController;
 
+//把View加在Window上
+- (void) addToWindow;
+
 @end

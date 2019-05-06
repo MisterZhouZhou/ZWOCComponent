@@ -36,6 +36,8 @@
 		A002B964227EF76B00559B13 /* NSString+Size.m in Sources */ = {isa = PBXBuildFile; fileRef = A002B963227EF76B00559B13 /* NSString+Size.m */; };
 		A002B967227EF9C600559B13 /* UIImage+Blur.m in Sources */ = {isa = PBXBuildFile; fileRef = A002B966227EF9C600559B13 /* UIImage+Blur.m */; };
 		A002B96A227EF9EC00559B13 /* UIImage+ImageEffects.m in Sources */ = {isa = PBXBuildFile; fileRef = A002B969227EF9EC00559B13 /* UIImage+ImageEffects.m */; };
+		A002B96D227EFC9700559B13 /* UIView+Screenshot.m in Sources */ = {isa = PBXBuildFile; fileRef = A002B96C227EFC9700559B13 /* UIView+Screenshot.m */; };
+		A002B970227EFCAE00559B13 /* UIView+Animation.m in Sources */ = {isa = PBXBuildFile; fileRef = A002B96F227EFCAE00559B13 /* UIView+Animation.m */; };
 		A05705E72272DF7500B16D9F /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A05705E62272DF7500B16D9F /* AppDelegate.m */; };
 		A05705EA2272DF7500B16D9F /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A05705E92272DF7500B16D9F /* ViewController.m */; };
 		A05705ED2272DF7500B16D9F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A05705EB2272DF7500B16D9F /* Main.storyboard */; };
@@ -138,6 +140,7 @@
 		A0D6124D2275A0CF004D5DAE /* icon_back@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A0D6124B2275A0CF004D5DAE /* icon_back@2x.png */; };
 		A0D6124E2275A0CF004D5DAE /* icon_back@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = A0D6124C2275A0CF004D5DAE /* icon_back@3x.png */; };
 		A0D612532275A5D4004D5DAE /* UIImage+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = A0D612522275A5D4004D5DAE /* UIImage+Extension.m */; };
+		A0EF41DC227FE444003E3F03 /* UITableView+CellAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = A0EF41DB227FE444003E3F03 /* UITableView+CellAnimation.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -203,6 +206,10 @@
 		A002B966227EF9C600559B13 /* UIImage+Blur.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIImage+Blur.m"; sourceTree = "<group>"; };
 		A002B968227EF9EC00559B13 /* UIImage+ImageEffects.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIImage+ImageEffects.h"; sourceTree = "<group>"; };
 		A002B969227EF9EC00559B13 /* UIImage+ImageEffects.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIImage+ImageEffects.m"; sourceTree = "<group>"; };
+		A002B96B227EFC9700559B13 /* UIView+Screenshot.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIView+Screenshot.h"; sourceTree = "<group>"; };
+		A002B96C227EFC9700559B13 /* UIView+Screenshot.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIView+Screenshot.m"; sourceTree = "<group>"; };
+		A002B96E227EFCAE00559B13 /* UIView+Animation.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIView+Animation.h"; sourceTree = "<group>"; };
+		A002B96F227EFCAE00559B13 /* UIView+Animation.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIView+Animation.m"; sourceTree = "<group>"; };
 		A05705E22272DF7400B16D9F /* ZWOCComponent.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ZWOCComponent.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A05705E52272DF7500B16D9F /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		A05705E62272DF7500B16D9F /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -398,6 +405,8 @@
 		A0D6124C2275A0CF004D5DAE /* icon_back@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon_back@3x.png"; sourceTree = "<group>"; };
 		A0D612512275A5D4004D5DAE /* UIImage+Extension.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIImage+Extension.h"; sourceTree = "<group>"; };
 		A0D612522275A5D4004D5DAE /* UIImage+Extension.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIImage+Extension.m"; sourceTree = "<group>"; };
+		A0EF41DA227FE444003E3F03 /* UITableView+CellAnimation.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UITableView+CellAnimation.h"; sourceTree = "<group>"; };
+		A0EF41DB227FE444003E3F03 /* UITableView+CellAnimation.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UITableView+CellAnimation.m"; sourceTree = "<group>"; };
 		DEFDFC21926799D830E4C364 /* Pods-ZWOCComponent.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ZWOCComponent.release.xcconfig"; path = "Pods/Target Support Files/Pods-ZWOCComponent/Pods-ZWOCComponent.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -518,6 +527,7 @@
 		A00389A6227548AF005BE1EE /* UIKit */ = {
 			isa = PBXGroup;
 			children = (
+				A0EF41D9227FE42F003E3F03 /* UITableView */,
 				A002B92F227EC38600559B13 /* UITextView */,
 				A002B92B227EC2D600559B13 /* UINavigationController */,
 				A002B927227EC02300559B13 /* UIAlertView */,
@@ -536,6 +546,10 @@
 				A0AFD55B2276A6C100F7A5AD /* UIView+HKFrame.m */,
 				A002B933227EC52A00559B13 /* UIView+Extension.h */,
 				A002B934227EC52A00559B13 /* UIView+Extension.m */,
+				A002B96B227EFC9700559B13 /* UIView+Screenshot.h */,
+				A002B96C227EFC9700559B13 /* UIView+Screenshot.m */,
+				A002B96E227EFCAE00559B13 /* UIView+Animation.h */,
+				A002B96F227EFCAE00559B13 /* UIView+Animation.m */,
 			);
 			path = UIView;
 			sourceTree = "<group>";
@@ -1232,6 +1246,15 @@
 			path = UIImage;
 			sourceTree = "<group>";
 		};
+		A0EF41D9227FE42F003E3F03 /* UITableView */ = {
+			isa = PBXGroup;
+			children = (
+				A0EF41DA227FE444003E3F03 /* UITableView+CellAnimation.h */,
+				A0EF41DB227FE444003E3F03 /* UITableView+CellAnimation.m */,
+			);
+			path = UITableView;
+			sourceTree = "<group>";
+		};
 		DF4DB9E122379F5F0D2A82D6 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -1384,6 +1407,7 @@
 				A0D611C0227588DB004D5DAE /* UIColor+Color.m in Sources */,
 				A0D6123C22759BF1004D5DAE /* ZFKVOController.m in Sources */,
 				A002B923227EBD8300559B13 /* NSString+DateFormatter.m in Sources */,
+				A002B970227EFCAE00559B13 /* UIView+Animation.m in Sources */,
 				A0D6123922759BF1004D5DAE /* ZFPlayerNotification.m in Sources */,
 				A05706122272F83E00B16D9F /* RootNavigationController.m in Sources */,
 				A0D6123722759BF1004D5DAE /* ZFPlayerLogManager.m in Sources */,
@@ -1435,6 +1459,7 @@
 				A07D5170227E7FC0000196ED /* ZWTextView.m in Sources */,
 				A0C12C9D2276FA04009C7DA2 /* CDDEmptView.m in Sources */,
 				A07D5177227E8E26000196ED /* AXRatingView.m in Sources */,
+				A0EF41DC227FE444003E3F03 /* UITableView+CellAnimation.m in Sources */,
 				A0AFD55D2276A6C100F7A5AD /* UIView+HKFrame.m in Sources */,
 				A0D6123D22759BF1004D5DAE /* ZFReachabilityManager.m in Sources */,
 				A002B964227EF76B00559B13 /* NSString+Size.m in Sources */,
@@ -1457,6 +1482,7 @@
 				A002B958227EF42300559B13 /* NSObject+Extension.m in Sources */,
 				A0AFD55722769E3200F7A5AD /* PickerViewController2.m in Sources */,
 				A0D6122E22759BF1004D5DAE /* ZFSpeedLoadingView.m in Sources */,
+				A002B96D227EFC9700559B13 /* UIView+Screenshot.m in Sources */,
 				A05706282273198000B16D9F /* PictureBrowerViewController.m in Sources */,
 				A002B92A227EC03C00559B13 /* UIAlertView+Extension.m in Sources */,
 				A0D6123122759BF1004D5DAE /* ZFIJKPlayerManager.m in Sources */,
