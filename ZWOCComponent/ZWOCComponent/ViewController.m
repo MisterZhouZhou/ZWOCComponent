@@ -22,6 +22,7 @@
 #import "ZWTextView.h"
 #import "AXRatingView.h"
 #import "CommentView.h"
+#import "LimitTextField.h"
 
 @interface ViewController ()
 
@@ -31,7 +32,13 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-  
+    self.view.backgroundColor = [UIColor whiteColor];
+    
+    LimitTextField *tf = [[LimitTextField alloc]initWithFrame:CGRectMake(10, 100, 200, 40)];
+    tf.layer.borderWidth = 1;
+    tf.layer.borderColor = [UIColor lightGrayColor].CGColor;
+    tf.limitCount = 5;
+    [self.view addSubview:tf];
 }
 
 - (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {

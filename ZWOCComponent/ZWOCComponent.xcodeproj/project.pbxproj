@@ -52,6 +52,7 @@
 		A05706202273121C00B16D9F /* PictureBrowseView.m in Sources */ = {isa = PBXBuildFile; fileRef = A057061F2273121C00B16D9F /* PictureBrowseView.m */; };
 		A0570623227315A800B16D9F /* ProgressView.m in Sources */ = {isa = PBXBuildFile; fileRef = A0570622227315A800B16D9F /* ProgressView.m */; };
 		A05706282273198000B16D9F /* PictureBrowerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A05706272273198000B16D9F /* PictureBrowerViewController.m */; };
+		A059BCDA2281832700F8FFB3 /* LimitTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = A059BCD92281832700F8FFB3 /* LimitTextField.m */; };
 		A07D5170227E7FC0000196ED /* ZWTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = A07D516F227E7FC0000196ED /* ZWTextView.m */; };
 		A07D5173227E886E000196ED /* ZWTextViewReadMe.md in Resources */ = {isa = PBXBuildFile; fileRef = A07D5172227E886E000196ED /* ZWTextViewReadMe.md */; };
 		A07D5177227E8E26000196ED /* AXRatingView.m in Sources */ = {isa = PBXBuildFile; fileRef = A07D5176227E8E26000196ED /* AXRatingView.m */; };
@@ -241,6 +242,8 @@
 		A05706252273163600B16D9F /* PhotoBrowerConfig.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PhotoBrowerConfig.h; sourceTree = "<group>"; };
 		A05706262273198000B16D9F /* PictureBrowerViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PictureBrowerViewController.h; sourceTree = "<group>"; };
 		A05706272273198000B16D9F /* PictureBrowerViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PictureBrowerViewController.m; sourceTree = "<group>"; };
+		A059BCD82281832700F8FFB3 /* LimitTextField.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LimitTextField.h; sourceTree = "<group>"; };
+		A059BCD92281832700F8FFB3 /* LimitTextField.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LimitTextField.m; sourceTree = "<group>"; };
 		A07D516E227E7FC0000196ED /* ZWTextView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZWTextView.h; sourceTree = "<group>"; };
 		A07D516F227E7FC0000196ED /* ZWTextView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZWTextView.m; sourceTree = "<group>"; };
 		A07D5172227E886E000196ED /* ZWTextViewReadMe.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = ZWTextViewReadMe.md; sourceTree = "<group>"; };
@@ -595,6 +598,7 @@
 		A05705FB2272DF8A00B16D9F /* Components */ = {
 			isa = PBXGroup;
 			children = (
+				A059BCD7228182E600F8FFB3 /* TextField */,
 				A002B945227ECFBF00559B13 /* CommentView */,
 				A07D5174227E8DF0000196ED /* AXRatingView */,
 				A07D5171227E7FCA000196ED /* TextView */,
@@ -733,6 +737,15 @@
 				A05706252273163600B16D9F /* PhotoBrowerConfig.h */,
 			);
 			path = Config;
+			sourceTree = "<group>";
+		};
+		A059BCD7228182E600F8FFB3 /* TextField */ = {
+			isa = PBXGroup;
+			children = (
+				A059BCD82281832700F8FFB3 /* LimitTextField.h */,
+				A059BCD92281832700F8FFB3 /* LimitTextField.m */,
+			);
+			path = TextField;
 			sourceTree = "<group>";
 		};
 		A07D5171227E7FCA000196ED /* TextView */ = {
@@ -1449,6 +1462,7 @@
 				A0D6122A22759BF1004D5DAE /* ZFSliderView.m in Sources */,
 				A0D6122322759BF1004D5DAE /* ZFAVPlayerManager.m in Sources */,
 				A0D6122F22759BF1004D5DAE /* ZFPortraitControlView.m in Sources */,
+				A059BCDA2281832700F8FFB3 /* LimitTextField.m in Sources */,
 				A07D517E227E94D9000196ED /* AESCipher.m in Sources */,
 				A0C12CA12276FA04009C7DA2 /* LYEmptyView.m in Sources */,
 				A05706052272E1D800B16D9F /* WebViewViewController.m in Sources */,
