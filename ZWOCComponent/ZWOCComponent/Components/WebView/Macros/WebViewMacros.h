@@ -12,13 +12,13 @@
 /*
  * WebView所支持的显示类型
  */
-typedef NS_ENUM(NSUInteger, WebViewType) {
+typedef NS_ENUM(NSUInteger, WKWebViewType) {
     /* 加载URL格式的页面 */
-    WebViewType_URL,
+    WKWebViewType_URL,
     /* 加载PDF文件的URL */
-    WebViewType_PDF,
+    WKWebViewType_PDF,
     /* 加载API请求的HTML内容 */
-    WebViewType_HTML
+    WKWebViewType_HTML
 };
 
 #endif /* WebViewMacros_h */
