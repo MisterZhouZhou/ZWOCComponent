@@ -5,6 +5,14 @@
 #import "AXRatingView.h"
 #import <QuartzCore/QuartzCore.h>
 
+@interface AXRatingView()
+{
+    CALayer *_starMaskLayer;
+    CALayer *_highlightLayer;
+//    UIImage *_markImage;
+}
+@end
+
 @implementation AXRatingView
 
 - (void)axRatingViewInit {

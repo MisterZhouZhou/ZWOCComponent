@@ -8,7 +8,7 @@
 
 #import "AppDelegate.h"
 #import "ViewController.h"
-#import "RootNavigationController.h"
+#import <ZWBaseModulesComponent/RootNavigationController.h>
 
 @interface AppDelegate ()
 

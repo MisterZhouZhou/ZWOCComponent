@@ -23,7 +23,8 @@
 #import "AXRatingView.h"
 #import "CommentView.h"
 #import "LimitTextField.h"
-
+#import "PublicAlertViewController.h"
+#import <ZWBaseModulesComponent/WKWebViewViewController.h>
 @interface ViewController ()
 
 @end
@@ -34,22 +35,57 @@
     [super viewDidLoad];
     self.view.backgroundColor = [UIColor whiteColor];
     
-    LimitTextField *tf = [[LimitTextField alloc]initWithFrame:CGRectMake(10, 100, 200, 40)];
-    tf.layer.borderWidth = 1;
-    tf.layer.borderColor = [UIColor lightGrayColor].CGColor;
-    tf.limitCount = 5;
-    [self.view addSubview:tf];
+    AXRatingView *ratingView = [[AXRatingView alloc]initWithFrame:CGRectMake(10, 100, 200, 40)];
+    ratingView.numberOfStar = 6;
+    ratingView.markImage = [UIImage imageNamed:@"icon_back"];
+    ratingView.baseColor = [UIColor redColor];
+    ratingView.stepInterval = 1;
+    [self.view addSubview:ratingView];
+    
+//    LimitTextField *tf = [[LimitTextField alloc]initWithFrame:CGRectMake(10, 100, 200, 40)];
+//    tf.layer.borderWidth = 1;
+//    tf.layer.borderColor = [UIColor lightGrayColor].CGColor;
+//    tf.numberCount = 18;
+//    tf.pointCount = 0;
+//    tf.placeholder = @"dd";
+//    tf.textFieldType = LimitTextFieldType_IdCard;
+//    [self.view addSubview:tf];
+    
+//    PublicAlertViewController *signAlertViewCon = [PublicAlertViewController new];
+//    //block
+//    [signAlertViewCon setPublicAlertSureClickBlock:^{}];
+//    [signAlertViewCon setPublicAlertCancelClickBlock:^{}];
+//    signAlertViewCon.alertTitle = @"hhh";
+//    signAlertViewCon.cancelTitle = @"";
+//    signAlertViewCon.sureTitle = @"确认";
+//    signAlertViewCon.modalTransitionStyle = UIModalPresentationOverFullScreen;
+//    signAlertViewCon.providesPresentationContextTransitionStyle = YES;
+//    signAlertViewCon.definesPresentationContext = YES;
+//    signAlertViewCon.modalPresentationStyle = UIModalPresentationOverFullScreen;
+//    [self presentViewController:signAlertViewCon animated:NO completion:nil];
+    
+    
+//    [BRAddressPickerView showAddressPickerWithDefaultSelected:@[@"浙江省", @"杭州市", @"西湖区"] resultBlock:^(BRProvinceModel *province, BRCityModel *city, BRAreaModel *area) {
+//        NSLog(@"%@-%@-%@", province.name, city.name, area.name);
+//    }];
+    
 }
 
-- (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
-   
-    PickerViewController2 *vc = [PickerViewController2 new];
-    [self.navigationController pushViewController:vc animated:YES];
-   
-//    BOOL hasName = [self respondsToSelector:@selector(name)];
-//    id name = [self performSelector:@selector(name)];
-//    NSLog(@"%@==%@", vc, name);
-}
+//- (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
+//
+////    PickerViewController2 *vc = [PickerViewController2 new];
+////    [self.navigationController pushViewController:vc animated:YES];
+////
+////    BOOL hasName = [self respondsToSelector:@selector(name)];
+////    id name = [self performSelector:@selector(name)];
+////    NSLog(@"%@==%@", vc, name);
+//
+//    WKWebViewViewController *vc = [WKWebViewViewController new];
+//    vc.webUrl = @"http://www.baidu.com";
+//    vc.webViewType = WKWebViewType_URL;
+//    vc.title = @"百度";
+//    [self.navigationController pushViewController:vc animated:YES];
+//}
 
 
 - (void)didReceiveMemoryWarning {

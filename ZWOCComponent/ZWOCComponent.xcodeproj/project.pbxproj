@@ -3,11 +3,11 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
-		142AA7D278AEF6E9FEB7E664 /* libPods-ZWOCComponent.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D9CFDB1FE751CDDA5B5C6DF /* libPods-ZWOCComponent.a */; };
+		605E31381FCCF6A16AA58F73 /* Pods_ZWOCComponent.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DE02A72A36BFD52795C43D53 /* Pods_ZWOCComponent.framework */; };
 		A002B918227EBA9D00559B13 /* NSDate+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = A002B917227EBA9D00559B13 /* NSDate+Extension.m */; };
 		A002B91C227EBB2600559B13 /* NSObject+Tools.m in Sources */ = {isa = PBXBuildFile; fileRef = A002B91A227EBB2600559B13 /* NSObject+Tools.m */; };
 		A002B923227EBD8300559B13 /* NSString+DateFormatter.m in Sources */ = {isa = PBXBuildFile; fileRef = A002B922227EBD8300559B13 /* NSString+DateFormatter.m */; };
@@ -162,7 +162,6 @@
 
 /* Begin PBXFileReference section */
 		122ACF4644D5DF04944509A6 /* Pods-ZWOCComponent.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ZWOCComponent.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ZWOCComponent/Pods-ZWOCComponent.debug.xcconfig"; sourceTree = "<group>"; };
-		1D9CFDB1FE751CDDA5B5C6DF /* libPods-ZWOCComponent.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-ZWOCComponent.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A002B915227EB98700559B13 /* CommonMacros.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CommonMacros.h; sourceTree = "<group>"; };
 		A002B916227EBA9D00559B13 /* NSDate+Extension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDate+Extension.h"; sourceTree = "<group>"; };
 		A002B917227EBA9D00559B13 /* NSDate+Extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDate+Extension.m"; sourceTree = "<group>"; };
@@ -410,6 +409,7 @@
 		A0D612522275A5D4004D5DAE /* UIImage+Extension.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIImage+Extension.m"; sourceTree = "<group>"; };
 		A0EF41DA227FE444003E3F03 /* UITableView+CellAnimation.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UITableView+CellAnimation.h"; sourceTree = "<group>"; };
 		A0EF41DB227FE444003E3F03 /* UITableView+CellAnimation.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UITableView+CellAnimation.m"; sourceTree = "<group>"; };
+		DE02A72A36BFD52795C43D53 /* Pods_ZWOCComponent.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ZWOCComponent.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DEFDFC21926799D830E4C364 /* Pods-ZWOCComponent.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ZWOCComponent.release.xcconfig"; path = "Pods/Target Support Files/Pods-ZWOCComponent/Pods-ZWOCComponent.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -422,7 +422,7 @@
 				A002B93B227EC7C400559B13 /* AipBase.framework in Frameworks */,
 				A07D5195227E9646000196ED /* AipBase.framework in Frameworks */,
 				A002B93D227EC7C800559B13 /* IdcardQuality.framework in Frameworks */,
-				142AA7D278AEF6E9FEB7E664 /* libPods-ZWOCComponent.a in Frameworks */,
+				605E31381FCCF6A16AA58F73 /* Pods_ZWOCComponent.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -433,7 +433,7 @@
 			isa = PBXGroup;
 			children = (
 				A002B936227EC74100559B13 /* CoreGraphics.framework */,
-				1D9CFDB1FE751CDDA5B5C6DF /* libPods-ZWOCComponent.a */,
+				DE02A72A36BFD52795C43D53 /* Pods_ZWOCComponent.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -1288,8 +1288,8 @@
 				A05705DE2272DF7400B16D9F /* Sources */,
 				A05705DF2272DF7400B16D9F /* Frameworks */,
 				A05705E02272DF7400B16D9F /* Resources */,
-				B13AC929C265D779C39C0084 /* [CP] Copy Pods Resources */,
 				A002B93A227EC7C100559B13 /* Embed Frameworks */,
+				9968C2D4B5A6738939EE10F2 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -1366,21 +1366,21 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		B13AC929C265D779C39C0084 /* [CP] Copy Pods Resources */ = {
+		9968C2D4B5A6738939EE10F2 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-ZWOCComponent/Pods-ZWOCComponent-resources-${CONFIGURATION}-input-files.xcfilelist",
+				"${PODS_ROOT}/Target Support Files/Pods-ZWOCComponent/Pods-ZWOCComponent-frameworks-${CONFIGURATION}-input-files.xcfilelist",
 			);
-			name = "[CP] Copy Pods Resources";
+			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-ZWOCComponent/Pods-ZWOCComponent-resources-${CONFIGURATION}-output-files.xcfilelist",
+				"${PODS_ROOT}/Target Support Files/Pods-ZWOCComponent/Pods-ZWOCComponent-frameworks-${CONFIGURATION}-output-files.xcfilelist",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-ZWOCComponent/Pods-ZWOCComponent-resources.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-ZWOCComponent/Pods-ZWOCComponent-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		D1DEF1B3D333405137FEC75E /* [CP] Check Pods Manifest.lock */ = {
@@ -1652,7 +1652,9 @@
 			baseConfigurationReference = 122ACF4644D5DF04944509A6 /* Pods-ZWOCComponent.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = RTV94SE5S4;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/ZWOCComponent/Tools/BDManager",
@@ -1662,8 +1664,9 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = dd.ZWOCComponent;
+				PRODUCT_BUNDLE_IDENTIFIER = com.misterzhouzhou.cn;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -1673,7 +1676,9 @@
 			baseConfigurationReference = DEFDFC21926799D830E4C364 /* Pods-ZWOCComponent.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = RTV94SE5S4;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/ZWOCComponent/Tools/BDManager",
@@ -1683,8 +1688,9 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = dd.ZWOCComponent;
+				PRODUCT_BUNDLE_IDENTIFIER = com.misterzhouzhou.cn;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;

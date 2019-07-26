@@ -205,7 +205,7 @@
     sender.backgroundColor = [UIColor lightGrayColor];
 }
 
--(void)changeSenderStyleEidit:(UIButton*)sender{
+-(void)changeSenderStyleEidit:(UIButton*)sender {
     sender.userInteractionEnabled = YES;
     sender.backgroundColor = [UIColor redColor];
 }

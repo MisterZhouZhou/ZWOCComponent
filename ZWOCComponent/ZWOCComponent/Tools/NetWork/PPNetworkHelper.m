@@ -9,7 +9,7 @@
 
 #import "PPNetworkHelper.h"
 
-#import "AFNetworkActivityIndicatorManager.h"
+#import <AFNetworking/AFNetworkActivityIndicatorManager.h>
 #import "AESCipher.h"
 #import "HeaderModel.h"
 #import "MBProgressHUD+XY.h"

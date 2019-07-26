@@ -1,8 +1,8 @@
-# use_frameworks!
-# inhibit_all_warnings!
+use_frameworks!
+inhibit_all_warnings!
 
-# source 'https://github.com/CocoaPods/Specs.git'
-# source 'https://github.com/ibireme/YYKit.git'
+source 'https://github.com/CocoaPods/Specs.git'
+source 'https://gitee.com/misterzhouwei/MyRepo.git'
 
 platform :ios, '8.0'
 
@@ -15,4 +15,7 @@ target 'ZWOCComponent' do
   pod 'Masonry'
   pod 'MJExtension'
   pod 'AFNetworking'
+  pod 'ZWBaseToolsComponent', '0.0.1'
+  pod 'ZWBaseModulesComponent', '0.0.1'
+  
 end
